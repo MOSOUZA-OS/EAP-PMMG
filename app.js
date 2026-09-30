@@ -63,6 +63,13 @@
   const btnSalvarImport = document.getElementById('btnSalvarImport');
   const btnDownloadTemplate = document.getElementById('btnDownloadTemplate');
 
+  // Elementos de Instalação PWA
+  const btnInstallApp = document.getElementById('btnInstallApp');
+  const modalInstall = document.getElementById('modalInstall');
+  const btnCloseInstall = document.getElementById('btnCloseInstall');
+  const btnEntendiInstall = document.getElementById('btnEntendiInstall');
+  let deferredInstallPrompt = null;
+
   // --- Inicialização ---
   async function init() {
     carregarStorage();
@@ -550,6 +557,52 @@
         carregarProximaQuestao();
       }
     });
+
+    // PWA & Instalação
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredInstallPrompt = e;
+      if (btnInstallApp) {
+        btnInstallApp.classList.remove('hidden');
+      }
+    });
+
+    if (btnInstallApp) {
+      btnInstallApp.addEventListener('click', async () => {
+        if (deferredInstallPrompt) {
+          deferredInstallPrompt.prompt();
+          const { outcome } = await deferredInstallPrompt.userChoice;
+          if (outcome === 'accepted') {
+            deferredInstallPrompt = null;
+          }
+        } else {
+          // Exibe modal explicativo (Safari / navegadores sem prompt automático)
+          modalInstall.classList.remove('hidden');
+          modalInstall.classList.add('flex');
+        }
+      });
+    }
+
+    if (btnCloseInstall) {
+      btnCloseInstall.addEventListener('click', () => {
+        modalInstall.classList.add('hidden');
+        modalInstall.classList.remove('flex');
+      });
+    }
+
+    if (btnEntendiInstall) {
+      btnEntendiInstall.addEventListener('click', () => {
+        modalInstall.classList.add('hidden');
+        modalInstall.classList.remove('flex');
+      });
+    }
+
+    // Registrar Service Worker para permitir instalação nativa
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js').catch(err => {
+        console.log('Falha ao registrar Service Worker:', err);
+      });
+    }
   }
 
   // Inicializar quando o DOM estiver pronto
