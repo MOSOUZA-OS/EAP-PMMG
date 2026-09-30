@@ -1,0 +1,142 @@
+[
+  {
+    "id": "eap-pmmg-001",
+    "tema": "Legislação Institucional",
+    "assunto": "CEDPM - Lei Estadual nº 14.310/2002",
+    "enunciado": "Nos termos do Código de Ética e Disciplina dos Militares do Estado de Minas Gerais (Lei nº 14.310/2002), sobre as transgressões disciplinares e suas classificações, assinale a alternativa CORRETA:",
+    "opcoes": [
+      { "id": "A", "texto": "A transgressão disciplinar classifica-se exclusivamente em grave e leve, inexistindo a gradação média no regime do CEDPM." },
+      { "id": "B", "texto": "As transgressões disciplinares classificam-se em graves, médias e leves, conforme a gradação da falta cometida e suas repercussões." },
+      { "id": "C", "texto": "O militar na reserva remunerada não comete transgressão de natureza grave, aplicando-se-lhe somente sanções de advertência." },
+      { "id": "D", "texto": "A advertência é sanção disciplinar prevista expressamente no rol taxativo do art. 24 do CEDPM." }
+    ],
+    "respostaCorreta": "B",
+    "explicacao": "Conforme o art. 12 do CEDPM (Lei Estadual nº 14.310/2002), as transgressões disciplinares são classificadas em: I - graves; II - médias; III - leves. A classificação depende da gravidade do fato e de seus reflexos no serviço ou na disciplina. Vale lembrar que a sanção disciplinar não inclui advertência (as sanções do art. 24 são: repreensão, prestação de serviço, suspensão e demissão)."
+  },
+  {
+    "id": "eap-pmmg-002",
+    "tema": "Legislação Institucional",
+    "assunto": "CEDPM - Lei Estadual nº 14.310/2002",
+    "enunciado": "A respeito das causas de justificação previstas no CEDPM (Lei nº 14.310/2002), haverá causa de justificação quando a infração disciplinar for cometida:",
+    "opcoes": [
+      { "id": "A", "texto": "Em legítima defesa própria ou de outrem, ou em estado de necessidade." },
+      { "id": "B", "texto": "Por motivo de relevante valor moral particular, ainda que sem autorização superior." },
+      { "id": "C", "texto": "Sob coação moral irresistível, circunstância que configura apenas causa atenuante da pena." },
+      { "id": "D", "texto": "Por militar com mais de dez anos de efetivo serviço sem qualquer punição anterior." }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "O art. 19 do CEDPM estabelece que 'Haverá causa de justificação quando qualquer ação for praticada: I - em legítima defesa própria ou de terceiros; II - em estado de necessidade; III - em estrito cumprimento de dever legal ou no exercício regular de direito; IV - por motivo de força maior ou caso fortuito devidamente comprovados; V - sob coação irresistível'. Quando comprovada a causa de justificação, não haverá punição disciplinar."
+  },
+  {
+    "id": "eap-pmmg-003",
+    "tema": "Legislação Institucional",
+    "assunto": "EMEMG - Lei Estadual nº 5.301/1969",
+    "enunciado": "Conforme o Estatuto dos Militares do Estado de Minas Gerais (Lei Estadual nº 5.301/1969), o militar que se afastar temporariamente do serviço ativo por ter sido considerado extraviado ou desaparecido permanecerá na situação de:",
+    "opcoes": [
+      { "id": "A", "texto": "Disponibilidade remunerada." },
+      { "id": "B", "texto": "Licença ex-officio sem remuneração." },
+      { "id": "C", "texto": "Agregação." },
+      { "id": "D", "texto": "Reserva não remunerada imediata." }
+    ],
+    "respostaCorreta": "C",
+    "explicacao": "Nos termos do EMEMG (Lei Estadual nº 5.301/1969), a agregação é a situação na qual o militar da ativa deixa de ocupar vaga na escala hierárquica do seu quadro, nela permanecendo sem número. Isso ocorre, entre outros casos, quando o militar for considerado extraviado, desaparecido, ou quando for colocado à disposição de outro órgão público pelo prazo legal."
+  },
+  {
+    "id": "eap-pmmg-004",
+    "tema": "Direito Penal Militar",
+    "assunto": "Crimes Militares e Competência",
+    "enunciado": "Sobre a Lei nº 13.491/2017, que alterou o art. 9º do Código Penal Militar (Decreto-Lei nº 1.001/1969), assinale a afirmativa CORRETA:",
+    "opcoes": [
+      { "id": "A", "texto": "Os crimes comuns previstos na legislação penal extravagante não podem, em nenhuma hipótese, ser considerados crimes militares por extensão." },
+      { "id": "B", "texto": "Os crimes previstos no Código Penal e na legislação penal extravagante, quando praticados por militar em serviço ou em razão da função nas condições do art. 9º, II, passam a ser de competência da Justiça Militar estadual, ressalvados os dolosos contra a vida de civil." },
+      { "id": "C", "texto": "O crime doloso contra a vida praticado por militar estadual em serviço contra civil será julgado pela Justiça Militar estadual mediante auditoria militar." },
+      { "id": "D", "texto": "A Lei nº 13.491/2017 restringiu o rol de crimes militares, limitando-os apenas àqueles expressos na Parte Especial do CPM." }
+    ],
+    "respostaCorreta": "B",
+    "explicacao": "A Lei 13.491/2017 ampliou substancialmente o conceito de crime militar, criando os 'crimes militares por extensão' (qualquer crime da legislação penal comum praticado nas condições do art. 9º, II do CPM). No entanto, pela Constituição Federal (art. 125, § 4º) e pelo art. 9º, § 1º do CPM, os crimes dolosos contra a vida praticados por militares estaduais contra civil são de competência exclusiva do Tribunal do Júri (Justiça Comum Estadual)."
+  },
+  {
+    "id": "eap-pmmg-005",
+    "tema": "Direito Penal Militar",
+    "assunto": "Crimes Contra a Autoridade Militar",
+    "enunciado": "No Código Penal Militar, o crime de 'Motim' (art. 149) distingue-se do crime de 'Revolta' (art. 149, parágrafo único) fundamentalmente pelo fato de que:",
+    "opcoes": [
+      { "id": "A", "texto": "A Revolta é praticada por militares isolados, ao passo que o Motim exige a reunião de pelo menos 10 militares." },
+      { "id": "B", "texto": "A Revolta exige que os agentes participantes do motim estejam armados." },
+      { "id": "C", "texto": "O Motim só ocorre em tempo de guerra, e a Revolta ocorre apenas em tempo de paz." },
+      { "id": "D", "texto": "O Motim prescinde de ação coletiva concertada, enquanto a Revolta pressupõe violência com lesão corporal grave consumada." }
+    ],
+    "respostaCorreta": "B",
+    "explicacao": "Nos termos do art. 149 do CPM, o crime de Motim ocorre quando militares reunidos desobedecem ou praticam atos contra a ordem de superior. A qualificadora/figura da 'Revolta' (parágrafo único do art. 149) configura-se quando os agentes participantes do motim estão ARMADOS (arma de fogo ou branca, própria ou imprópria)."
+  },
+  {
+    "id": "eap-pmmg-006",
+    "tema": "Doutrina Operacional e POP",
+    "assunto": "Uso Diferenciado da Força",
+    "enunciado": "A respeito do Modelo de Uso Diferenciado da Força adotado na doutrina da PMMG, assinale a opção que apresenta um de seus princípios basilares indispensáveis:",
+    "opcoes": [
+      { "id": "A", "texto": "Antecipação tática com emprego imediato de arma de fogo antes de qualquer verbalização preventiva." },
+      { "id": "B", "texto": "Legalidade, Necessidade, Proporcionalidade, Conveniência e Moderação." },
+      { "id": "C", "texto": "Primazia da força física letal nas abordagens de rotina para preservação estrita da soberania estatal." },
+      { "id": "D", "texto": "Exclusividade de técnicas de controle de contato apenas contra indivíduos cooperativos." }
+    ],
+    "respostaCorreta": "B",
+    "explicacao": "A doutrina da PMMG (Resolução 4.285/13 e Manuais de Prática Policial) consagra como princípios fundamentais do Uso Diferenciado da Força: Legalidade (previsão em lei), Necessidade (não haver outro meio menos gravoso), Proporcionalidade (intensidade compatível com a ameaça), Conveniência (avaliação do momento oportuno) e Moderação (cessação do uso da força logo após o controle da ameaça)."
+  },
+  {
+    "id": "eap-pmmg-007",
+    "tema": "Doutrina Operacional e POP",
+    "assunto": "Procedimento Operacional Padrão (POP)",
+    "enunciado": "Segundo os Procedimentos Operacionais Padrão (POP) da PMMG, na realização da abordagem policial de transeunte suspeito, a equipe policial deve estruturar a sua atuação em três papéis bem definidos. São eles:",
+    "opcoes": [
+      { "id": "A", "texto": "Comandante, Motorista e Redator de B.O." },
+      { "id": "B", "texto": "Segurança, Abordador e Apoiador (ou Cobertura)." },
+      { "id": "C", "texto": "Perito, Negociador e Investigador." },
+      { "id": "D", "texto": "Escolta primária, Interrogador e Testemunha instrumental." }
+    ],
+    "respostaCorreta": "B",
+    "explicacao": "Na doutrina de abordagem policial da PMMG (POP), a divisão de tarefas táticas em uma guarnição visa garantir a segurança de todos. O militar abordador é responsável pela verbalização, comando e busca pessoal no suspeito, enquanto os demais militares desempenham a cobertura/segurança (atenção visual periférica ao ambiente e pronta reação a qualquer ameaça iminente)."
+  },
+  {
+    "id": "eap-pmmg-008",
+    "tema": "Legislação Extravagante",
+    "assunto": "Lei de Abuso de Autoridade - Lei nº 13.869/2019",
+    "enunciado": "Para a caracterização dos crimes previstos na Lei de Abuso de Autoridade (Lei nº 13.869/2019), além do dolo comum, exige-se:",
+    "opcoes": [
+      { "id": "A", "texto": "Apenas a comprovação de dano patrimonial sofrido pela vítima da conduta." },
+      { "id": "B", "texto": "O dolo específico consistente na finalidade específica de prejudicar outrem ou beneficiar a si mesmo ou a terceiro, ou, ainda, por mero capricho ou satisfação pessoal." },
+      { "id": "C", "texto": "A homologação prévia da conduta ilícita pela Corregedoria do órgão antes do oferecimento da denúncia penal." },
+      { "id": "D", "texto": "Culpa em sentido estrito decorrente de negligência profissional grave." }
+    ],
+    "respostaCorreta": "B",
+    "explicacao": "O art. 1º, § 1º da Lei nº 13.869/2019 estabelece expressamente que as condutas descritas constituem crime de abuso de autoridade quando praticadas pelo agente com a finalidade específica de prejudicar outrem ou beneficiar a si mesmo ou a terceiro, ou, ainda, por mero capricho ou satisfação pessoal (elemento subjetivo especial do tipo ou dolo específico). Além disso, o § 2º ressalva expressamente que a divergência na interpretação de lei ou na avaliação de fatos e provas não configura abuso de autoridade."
+  },
+  {
+    "id": "eap-pmmg-009",
+    "tema": "Legislação Extravagante",
+    "assunto": "Lei Maria da Penha - Lei nº 11.340/2006",
+    "enunciado": "Policial militar, acionado via COPOM, depara-se com um agressor que acabou de descumprir expressa decisão judicial que deferiu medidas protetivas de urgência em favor de sua ex-companheira. De acordo com o art. 24-A da Lei nº 11.340/2006, o policial militar deve:",
+    "opcoes": [
+      { "id": "A", "texto": "Apenas lavrar Termo Circunstanciado de Ocorrência (TCO), por se tratar de crime de menor potencial ofensivo que não admite flagrante." },
+      { "id": "B", "texto": "Efetuar a prisão em flagrante delito do autor pelo crime autônomo de descumprimento de medidas protetivas de urgência." },
+      { "id": "C", "texto": "Orientar o autor a comparecer espontaneamente ao fórum no dia útil seguinte, sem condução coercitiva." },
+      { "id": "D", "texto": "Arbitrar fiança imediatamente no local dos fatos, caso o agressor seja primário." }
+    ],
+    "respostaCorreta": "B",
+    "explicacao": "O art. 24-A da Lei Maria da Penha criminalizou o descumprimento de decisão judicial que defere medidas protetivas de urgência (pena de detenção de 3 meses a 2 anos). O policial militar deve efetuar a prisão em flagrante delito e conduzir o autor à Delegacia de Polícia. Importante: na fase policial, apenas a autoridade judicial poderá conceder fiança (§ 2º do art. 24-A), ou seja, nem o delegado de polícia pode arbitrar fiança nesse crime."
+  },
+  {
+    "id": "eap-pmmg-010",
+    "tema": "Legislação Institucional",
+    "assunto": "CEDPM - Lei Estadual nº 14.310/2002",
+    "enunciado": "No âmbito do processo disciplinar regido pelo CEDPM (Lei nº 14.310/2002), sobre os prazos para interposição de recursos disciplinares e a garantia da ampla defesa, assinale a opção CORRETA:",
+    "opcoes": [
+      { "id": "A", "texto": "O militar não tem direito a recurso das sanções de prestação de serviços ou repreensão, cabendo recurso somente em caso de demissão." },
+      { "id": "B", "texto": "O prazo para interposição de recurso disciplinar é de 5 (cinco) dias úteis, contados da data em que o militar tomar conhecimento oficial da decisão." },
+      { "id": "C", "texto": "O recurso disciplinar possui efeito suspensivo automático e indefectível para todas as sanções disciplinares." },
+      { "id": "D", "texto": "O militar deve recolher custas administrativas recursais previamente para que seu recurso seja recebido pela autoridade julgadora." }
+    ],
+    "respostaCorreta": "B",
+    "explicacao": "Conforme o art. 61 e seguintes do CEDPM (Lei nº 14.310/2002), o militar punido tem o direito de interpor Pedido de Reconsideração de Ato ou Recurso Disciplinar no prazo de 5 (cinco) dias úteis, a contar do primeiro dia útil seguinte ao da notificação oficial ou publicação da sanção em boletim."
+  }
+]

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>EAP PMMG - Simulado & Treinamento Inteligente</title>
+  
+  <!-- PWA & Mobile Meta Tags -->
+  <meta name="theme-color" content="#0f172a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23f59e0b'><path d='M12 2L1 21h22L12 2zm0 3.99L19.53 19H4.47L12 5.99zM11 10v4h2v-4h-2zm0 6v2h2v-2h-2z'/></svg>">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f8fafc',
+              800: '#1e293b',
+              900: '#0f172a',
+              gold: '#d97706',
+              goldLight: '#fbbf24',
+              accent: '#10b981'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Custom scrollbar and smooth transitions */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #0f172a; }
+    ::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+    .touch-callout-none { -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col font-sans antialiased selection:bg-amber-500 selection:text-slate-950">
+
+  <!-- Top Navbar -->
+  <header class="sticky top-0 z-40 bg-slate-900/90 backdrop-blur border-b border-slate-800 shadow-md">
+    <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center space-x-2.5">
+        <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center shadow-lg shadow-amber-900/30">
+          <svg class="w-5 h-5 text-slate-950 font-bold" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <div>
+          <h1 class="font-extrabold text-base tracking-wide text-white flex items-center gap-1.5">
+            EAP PMMG <span class="text-xs font-semibold px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-400 border border-amber-500/30">PRO</span>
+          </h1>
+          <p class="text-[11px] text-slate-400 leading-tight">Exame de Aptidão Profissional</p>
+        </div>
+      </div>
+
+      <!-- Quick Action Buttons -->
+      <div class="flex items-center gap-2">
+        <button id="btnStatsModal" title="Estatísticas" class="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        </button>
+        <button id="btnSettingsModal" title="Importar Questões dos PDFs" class="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-amber-400 hover:text-amber-300 transition">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Filter Control Bar -->
+    <div class="max-w-4xl mx-auto px-4 py-2.5 bg-slate-900/60 border-t border-slate-800/80">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+        <!-- Mode Switcher -->
+        <div>
+          <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Modo de Estudo</label>
+          <select id="selectMode" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-amber-500">
+            <option value="estudo">Estudo por Tópicos</option>
+            <option value="simulado">Simulado Geral (Todas)</option>
+            <option value="erros">Caderno de Erros (<span id="countErrosBadge">0</span>)</option>
+          </select>
+        </div>
+
+        <!-- Filter Tema -->
+        <div id="wrapperTema">
+          <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Tema Principal</label>
+          <select id="selectTema" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-amber-500">
+            <option value="todos">Todos os Temas</option>
+          </select>
+        </div>
+
+        <!-- Filter Assunto -->
+        <div id="wrapperAssunto">
+          <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Assunto / Norma</label>
+          <select id="selectAssunto" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-amber-500">
+            <option value="todos">Todos os Assuntos</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="flex-1 max-w-3xl w-full mx-auto p-4 sm:p-6 flex flex-col justify-start">
+    
+    <!-- Status / Progress Bar -->
+    <div class="mb-4 flex items-center justify-between text-xs text-slate-400">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-medium bg-slate-800 text-slate-300 border border-slate-700">
+          Inéditas no filtro: <b id="lblRestantes" class="ml-1 text-amber-400">0</b>
+        </span>
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-medium bg-slate-800 text-slate-300 border border-slate-700">
+          Acerto: <b id="lblTaxaAcerto" class="ml-1 text-emerald-400">0%</b>
+        </span>
+      </div>
+      <button id="btnResetProgress" class="text-xs text-slate-500 hover:text-amber-400 underline transition">
+        Reiniciar ciclo
+      </button>
+    </div>
+
+    <!-- Active Question Card -->
+    <div id="cardQuestao" class="bg-slate-900 border border-slate-800 rounded-2xl p-5 sm:p-6 shadow-xl relative transition-all duration-300">
+      
+      <!-- Tags & Badges -->
+      <div class="flex flex-wrap items-center gap-2 mb-3">
+        <span id="badgeTema" class="text-xs font-semibold px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20">
+          Tema
+        </span>
+        <span id="badgeAssunto" class="text-xs px-2.5 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700">
+          Assunto
+        </span>
+        <span id="badgeId" class="text-[10px] text-slate-500 ml-auto font-mono">
+          #001
+        </span>
+      </div>
+
+      <!-- Question Text -->
+      <div class="mb-6">
+        <p id="txtEnunciado" class="text-slate-100 text-base sm:text-lg leading-relaxed font-medium">
+          Carregando questões...
+        </p>
+      </div>
+
+      <!-- Options List -->
+      <div id="containerOpcoes" class="space-y-3 mb-6">
+        <!-- Injected via JS -->
+      </div>
+
+      <!-- Action Footer -->
+      <div class="pt-4 border-t border-slate-800 flex flex-col sm:flex-row items-center gap-3">
+        <button id="btnConfirmar" disabled class="w-full sm:w-auto flex-1 bg-amber-500 hover:bg-amber-400 disabled:opacity-40 disabled:cursor-not-allowed text-slate-950 font-bold py-3.5 px-6 rounded-xl transition duration-200 flex items-center justify-center gap-2 shadow-lg shadow-amber-950/40">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          Confirmar Resposta
+        </button>
+
+        <button id="btnProxima" class="hidden w-full sm:w-auto bg-slate-800 hover:bg-slate-700 text-white font-semibold py-3.5 px-6 rounded-xl transition flex items-center justify-center gap-2 border border-slate-700">
+          <span>Próxima Pergunta</span>
+          <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </button>
+      </div>
+
+      <!-- Feedback & Explanation Box -->
+      <div id="boxExplicacao" class="hidden mt-6 p-4 rounded-xl border transition-all duration-300">
+        <div class="flex items-center gap-2 mb-2 font-bold text-sm" id="feedbackTitle">
+          <!-- Icon and result text -->
+        </div>
+        <div class="text-xs sm:text-sm text-slate-300 leading-relaxed space-y-2" id="feedbackContent">
+          <!-- Commented resolution -->
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Empty State / Completed Banner -->
+    <div id="cardCompletado" class="hidden bg-slate-900 border border-slate-800 rounded-2xl p-8 text-center shadow-xl">
+      <div class="w-16 h-16 bg-amber-500/10 text-amber-400 border border-amber-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      </div>
+      <h2 class="text-xl font-bold text-white mb-2">Ciclo de Questões Concluído!</h2>
+      <p class="text-sm text-slate-400 max-w-md mx-auto mb-6">
+        Você respondeu todas as perguntas disponíveis no filtro selecionado sem repetição.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3 justify-center">
+        <button id="btnReiniciarFiltro" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-6 py-3 rounded-xl transition">
+          Reiniciar Este Tópico
+        </button>
+        <button id="btnIrParaErros" class="bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold px-6 py-3 rounded-xl transition">
+          Revisar Erros
+        </button>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Modal: Estatísticas e Rendimento -->
+  <div id="modalStats" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-lg w-full p-6 shadow-2xl relative">
+      <button id="btnCloseStats" class="absolute top-4 right-4 text-slate-400 hover:text-white">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+        <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+        Seu Desempenho no EAP
+      </h3>
+      
+      <div class="grid grid-cols-3 gap-3 mb-6 text-center">
+        <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">
+          <p class="text-xs text-slate-400">Total Feitas</p>
+          <p id="statTotal" class="text-xl font-bold text-white">0</p>
+        </div>
+        <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">
+          <p class="text-xs text-emerald-400">Acertos</p>
+          <p id="statAcertos" class="text-xl font-bold text-emerald-400">0</p>
+        </div>
+        <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">
+          <p class="text-xs text-rose-400">Erros</p>
+          <p id="statErros" class="text-xl font-bold text-rose-400">0</p>
+        </div>
+      </div>
+
+      <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Aproveitamento por Tema</h4>
+      <div id="statsPorTema" class="space-y-3 max-h-56 overflow-y-auto pr-1">
+        <!-- Injected via JS -->
+      </div>
+
+      <div class="mt-6 pt-4 border-t border-slate-800 flex justify-end">
+        <button id="btnZerarTudo" class="text-xs text-rose-400 hover:text-rose-300">
+          Limpar Todo o Histórico
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Importar / Adicionar Questões dos PDFs -->
+  <div id="modalImport" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-xl w-full p-6 shadow-2xl relative max-h-[90vh] flex flex-col">
+      <button id="btnCloseImport" class="absolute top-4 right-4 text-slate-400 hover:text-white">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+        <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+        Adicionar Questões dos seus PDFs
+      </h3>
+      <p class="text-xs text-slate-400 mb-4">
+        Cole aqui novas questões extraídas dos seus arquivos PDF em formato JSON. Elas serão salvas no seu aplicativo automaticamente.
+      </p>
+
+      <div class="flex-1 flex flex-col mb-4">
+        <textarea id="txtJsonImport" placeholder='Cole aqui a lista em formato JSON...' class="w-full flex-1 min-h-[160px] bg-slate-950 border border-slate-700 rounded-xl p-3 font-mono text-xs text-slate-200 focus:outline-none focus:border-amber-500"></textarea>
+      </div>
+
+      <div class="flex items-center justify-between gap-3 pt-2">
+        <button id="btnDownloadTemplate" class="text-xs text-slate-400 hover:text-amber-400 underline">
+          Ver formato padrão (JSON)
+        </button>
+        <button id="btnSalvarImport" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-5 py-2.5 rounded-xl transition text-sm">
+          Salvar no Aplicativo
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="py-3 px-4 text-center text-[11px] text-slate-600 border-t border-slate-900">
+    EAP PMMG &bull; Ferramenta de Estudos e Fixação Ativa &bull; Armazenamento 100% Local & Offline
+  </footer>
+
+  <!-- Core App Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
