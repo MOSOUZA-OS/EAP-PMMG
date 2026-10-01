@@ -1,4 +1,5 @@
 // EAP PMMG - Simulado & Treinamento Inteligente
+// Sistema de Rodadas, Inéditas e Ciclos de Reforço com Alternativas Dinâmicas
 // Armazenamento 100% Local (Offline First)
 
 (function () {
@@ -6,9 +7,12 @@
 
   // --- Chaves do LocalStorage ---
   const STORAGE_CUSTOM_QUESTOES = 'eap_pmmg_custom_questoes';
-  const STORAGE_RESPONDIDAS = 'eap_pmmg_respondidas'; // Array de IDs
-  const STORAGE_ERROS = 'eap_pmmg_erros';             // Array de IDs
-  const STORAGE_STATS = 'eap_pmmg_stats';             // { total: 0, acertos: 0, porTema: {} }
+  const STORAGE_RESPONDIDAS = 'eap_pmmg_respondidas';        // Array de IDs
+  const STORAGE_ERROS = 'eap_pmmg_erros';                    // Array de IDs
+  const STORAGE_STATS = 'eap_pmmg_stats';                    // { total: 0, acertos: 0, porTema: {} }
+  const STORAGE_CICLO = 'eap_pmmg_ciclo';                    // Número do Ciclo (1 = inéditas, 2+ = reforço)
+  const STORAGE_RESP_CICLO = 'eap_pmmg_resp_ciclo';          // Questões já feitas no ciclo atual de reforço
+  const STORAGE_TAMANHO_RODADA = 'eap_pmmg_tamanho_rodada';  // Qtd de questões por rodada
 
   // --- Estado Global ---
   let bancoQuestoes = [];
@@ -16,7 +20,16 @@
   let opcaoSelecionada = null;
   let respondidasSet = new Set();
   let errosSet = new Set();
+  let respCicloSet = new Set();
   let statsData = { total: 0, acertos: 0, porTema: {} };
+
+  let cicloAtual = 1;
+  let tamanhoRodada = 10;
+  let numeroRodada = 1;
+  let respondidasNaRodada = 0;
+  let acertosNaRodada = 0;
+  let errosNaRodada = [];
+  let questoesFilaRodada = []; // Fila ativa da rodada atual
 
   // --- Elementos do DOM ---
   const selectMode = document.getElementById('selectMode');
@@ -25,13 +38,22 @@
   const wrapperTema = document.getElementById('wrapperTema');
   const wrapperAssunto = document.getElementById('wrapperAssunto');
 
+  // Status e Rodadas
+  const lblRodadaAtual = document.getElementById('lblRodadaAtual');
+  const lblProgressoRodada = document.getElementById('lblProgressoRodada');
+  const badgeCiclo = document.getElementById('badgeCiclo');
   const lblRestantes = document.getElementById('lblRestantes');
   const lblTaxaAcerto = document.getElementById('lblTaxaAcerto');
   const countErrosBadge = document.getElementById('countErrosBadge');
+  const selectTamanhoRodada = document.getElementById('selectTamanhoRodada');
   const btnResetProgress = document.getElementById('btnResetProgress');
 
+  // Cards
   const cardQuestao = document.getElementById('cardQuestao');
+  const cardFimRodada = document.getElementById('cardFimRodada');
   const cardCompletado = document.getElementById('cardCompletado');
+
+  // Detalhes da Questão
   const badgeTema = document.getElementById('badgeTema');
   const badgeAssunto = document.getElementById('badgeAssunto');
   const badgeId = document.getElementById('badgeId');
@@ -43,8 +65,19 @@
   const feedbackTitle = document.getElementById('feedbackTitle');
   const feedbackContent = document.getElementById('feedbackContent');
 
-  const btnReiniciarFiltro = document.getElementById('btnReiniciarFiltro');
-  const btnIrParaErros = document.getElementById('btnIrParaErros');
+  // Card Fim de Rodada
+  const numRodadaConcluida = document.getElementById('numRodadaConcluida');
+  const txtQuestoesRodada = document.getElementById('txtQuestoesRodada');
+  const rodadaAcertos = document.getElementById('rodadaAcertos');
+  const rodadaErros = document.getElementById('rodadaErros');
+  const rodadaPct = document.getElementById('rodadaPct');
+  const rodadaIneditasRestantes = document.getElementById('rodadaIneditasRestantes');
+  const btnProximaRodada = document.getElementById('btnProximaRodada');
+  const btnRevisarErrosRodada = document.getElementById('btnRevisarErrosRodada');
+
+  // Card Conteúdo Esgotado / Reforço
+  const btnIniciarCicloReforco = document.getElementById('btnIniciarCicloReforco');
+  const btnAbrirImportador = document.getElementById('btnAbrirImportador');
 
   // Modais
   const modalStats = document.getElementById('modalStats');
@@ -63,7 +96,7 @@
   const btnSalvarImport = document.getElementById('btnSalvarImport');
   const btnDownloadTemplate = document.getElementById('btnDownloadTemplate');
 
-  // Elementos de Instalação PWA
+  // PWA
   const btnInstallApp = document.getElementById('btnInstallApp');
   const modalInstall = document.getElementById('modalInstall');
   const btnCloseInstall = document.getElementById('btnCloseInstall');
@@ -76,7 +109,7 @@
     await carregarQuestoes();
     atualizarFiltros();
     atualizarResumoTopo();
-    carregarProximaQuestao();
+    iniciarNovaRodada();
     registrarEventos();
   }
 
@@ -91,6 +124,18 @@
 
       const st = localStorage.getItem(STORAGE_STATS);
       if (st) statsData = JSON.parse(st);
+
+      const ciclo = localStorage.getItem(STORAGE_CICLO);
+      if (ciclo) cicloAtual = parseInt(ciclo, 10) || 1;
+
+      const respCiclo = localStorage.getItem(STORAGE_RESP_CICLO);
+      if (respCiclo) respCicloSet = new Set(JSON.parse(respCiclo));
+
+      const tam = localStorage.getItem(STORAGE_TAMANHO_RODADA);
+      if (tam && selectTamanhoRodada) {
+        tamanhoRodada = parseInt(tam, 10) || 10;
+        selectTamanhoRodada.value = tamanhoRodada.toString();
+      }
     } catch (e) {
       console.error('Erro ao ler LocalStorage', e);
     }
@@ -100,32 +145,31 @@
     localStorage.setItem(STORAGE_RESPONDIDAS, JSON.stringify(Array.from(respondidasSet)));
     localStorage.setItem(STORAGE_ERROS, JSON.stringify(Array.from(errosSet)));
     localStorage.setItem(STORAGE_STATS, JSON.stringify(statsData));
+    localStorage.setItem(STORAGE_CICLO, cicloAtual.toString());
+    localStorage.setItem(STORAGE_RESP_CICLO, JSON.stringify(Array.from(respCicloSet)));
+    localStorage.setItem(STORAGE_TAMANHO_RODADA, tamanhoRodada.toString());
   }
 
   // --- Carregamento de Questões ---
   async function carregarQuestoes() {
     let base = [];
     try {
-      const res = await fetch('questoes.json');
+      const res = await fetch('questoes.json?v=' + Date.now());
       if (res.ok) {
         base = await res.json();
       }
     } catch (err) {
-      console.warn('Arquivo questoes.json local não carregado via fetch (modo arquivo direto)', err);
+      console.warn('questoes.json local não carregado via fetch', err);
     }
 
-    // Carregar questões customizadas importadas pelo usuário
     let custom = [];
     try {
       const rawCustom = localStorage.getItem(STORAGE_CUSTOM_QUESTOES);
-      if (rawCustom) {
-        custom = JSON.parse(rawCustom);
-      }
+      if (rawCustom) custom = JSON.parse(rawCustom);
     } catch (e) {
       console.error('Erro ao ler custom questions', e);
     }
 
-    // Unir por ID único (prioriza customizado se houver conflito)
     const map = new Map();
     base.forEach(q => map.set(q.id, q));
     custom.forEach(q => map.set(q.id, q));
@@ -136,10 +180,7 @@
   function atualizarFiltros() {
     const modo = selectMode.value;
 
-    if (modo === 'simulado') {
-      wrapperTema.classList.add('opacity-40', 'pointer-events-none');
-      wrapperAssunto.classList.add('opacity-40', 'pointer-events-none');
-    } else if (modo === 'erros') {
+    if (modo === 'simulado' || modo === 'erros') {
       wrapperTema.classList.add('opacity-40', 'pointer-events-none');
       wrapperAssunto.classList.add('opacity-40', 'pointer-events-none');
     } else {
@@ -147,7 +188,6 @@
       wrapperAssunto.classList.remove('opacity-40', 'pointer-events-none');
     }
 
-    // Temas únicos
     const temaAtual = selectTema.value;
     const temas = Array.from(new Set(bancoQuestoes.map(q => q.tema).filter(Boolean)));
     selectTema.innerHTML = '<option value="todos">Todos os Temas</option>';
@@ -193,7 +233,6 @@
       return bancoQuestoes;
     }
 
-    // Modo Estudo
     const temaSel = selectTema.value;
     const assuntoSel = selectAssunto.value;
 
@@ -204,50 +243,132 @@
     });
   }
 
-  // --- Próxima Questão com Sistema Anti-Repetição ---
-  function carregarProximaQuestao() {
+  // --- Obter Questões Inéditas Restantes no Filtro ---
+  function obterQuestoesIneditasRestantes() {
+    const todasNoFiltro = obterQuestoesFiltradas();
+    if (cicloAtual === 1) {
+      return todasNoFiltro.filter(q => !respondidasSet.has(q.id));
+    } else {
+      // No ciclo de reforço, inéditas dentro daquele ciclo
+      return todasNoFiltro.filter(q => !respCicloSet.has(q.id));
+    }
+  }
+
+  // --- Sistema Inteligente Anti-Decoreba: Embaralhamento de Alternativas ---
+  // Transforma uma questão para que as opções mudem de letra (A, B, C, D)
+  function prepararQuestaoComEmbaralhamento(qOriginal) {
+    const opcoesCopia = qOriginal.opcoes.map(o => ({ ...o }));
+    const textoCorreto = qOriginal.opcoes.find(o => o.id === qOriginal.respostaCorreta)?.texto;
+
+    // Embaralha aleatoriamente as opções
+    for (let i = opcoesCopia.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [opcoesCopia[i], opcoesCopia[j]] = [opcoesCopia[j], opcoesCopia[i]];
+    }
+
+    const letras = ['A', 'B', 'C', 'D', 'E'];
+    const novasOpcoes = opcoesCopia.map((item, idx) => ({
+      id: letras[idx],
+      texto: item.texto
+    }));
+
+    const novaRespostaCorreta = novasOpcoes.find(o => o.texto === textoCorreto)?.id || 'A';
+
+    return {
+      ...qOriginal,
+      opcoes: novasOpcoes,
+      respostaCorreta: novaRespostaCorreta,
+      isEmbaralhada: true
+    };
+  }
+
+  // --- Montar e Iniciar uma Nova Rodada com Questões Inéditas ---
+  function iniciarNovaRodada() {
+    respondidasNaRodada = 0;
+    acertosNaRodada = 0;
+    errosNaRodada = [];
+
+    const todasNoFiltro = obterQuestoesFiltradas();
+
+    if (todasNoFiltro.length === 0) {
+      cardQuestao.classList.add('hidden');
+      cardFimRodada.classList.add('hidden');
+      cardCompletado.classList.remove('hidden');
+      return;
+    }
+
+    let disponiveis = [];
+
+    if (cicloAtual === 1) {
+      // Ciclo 1: Questões estritamente INÉDITAS no banco
+      disponiveis = todasNoFiltro.filter(q => !respondidasSet.has(q.id));
+
+      if (disponiveis.length === 0) {
+        // Todas as questões inéditas foram esgotadas!
+        cardQuestao.classList.add('hidden');
+        cardFimRodada.classList.add('hidden');
+        cardCompletado.classList.remove('hidden');
+        return;
+      }
+
+      // Embaralha as disponíveis para sortear a rodada
+      disponiveis.sort(() => Math.random() - 0.5);
+      // Pega até o tamanho da rodada (ex: 10)
+      questoesFilaRodada = disponiveis.slice(0, tamanhoRodada).map(q => ({ ...q }));
+
+    } else {
+      // Ciclo 2+: Modo Reforço Inteligente (não repete no mesmo ciclo e embaralha opções)
+      disponiveis = todasNoFiltro.filter(q => !respCicloSet.has(q.id));
+
+      if (disponiveis.length === 0) {
+        // Completou o ciclo de reforço, inicia próximo ciclo
+        cicloAtual++;
+        respCicloSet.clear();
+        salvarStorage();
+        disponiveis = [...todasNoFiltro];
+      }
+
+      // Prioridade máxima para as que foram erradas anteriormente!
+      disponiveis.sort((a, b) => {
+        const aErro = errosSet.has(a.id) ? -1 : 1;
+        const bErro = errosSet.has(b.id) ? -1 : 1;
+        return aErro - bErro || (Math.random() - 0.5);
+      });
+
+      questoesFilaRodada = disponiveis.slice(0, tamanhoRodada).map(q => prepararQuestaoComEmbaralhamento(q));
+    }
+
+    cardFimRodada.classList.add('hidden');
+    cardCompletado.classList.add('hidden');
+    cardQuestao.classList.remove('hidden');
+
+    atualizarResumoTopo();
+    carregarProximaQuestaoDaFila();
+  }
+
+  // --- Carregar Próxima Questão da Rodada Ativa ---
+  function carregarProximaQuestaoDaFila() {
     opcaoSelecionada = null;
     btnConfirmar.disabled = true;
     btnConfirmar.classList.remove('hidden');
     btnProxima.classList.add('hidden');
     boxExplicacao.classList.add('hidden');
 
-    const questoesNoFiltro = obterQuestoesFiltradas();
-    const modo = selectMode.value;
-
-    // Apenas as não respondidas neste ciclo
-    let candidatas = [];
-    if (modo === 'erros') {
-      // No caderno de erros, se já respondeu certo na sessão, você remove
-      candidatas = questoesNoFiltro;
-    } else {
-      candidatas = questoesNoFiltro.filter(q => !respondidasSet.has(q.id));
-    }
-
-    lblRestantes.textContent = candidatas.length;
-    atualizarResumoTopo();
-
-    if (candidatas.length === 0) {
-      cardQuestao.classList.add('hidden');
-      cardCompletado.classList.remove('hidden');
+    if (questoesFilaRodada.length === 0) {
+      finalizarRodada();
       return;
     }
 
-    cardCompletado.classList.add('hidden');
-    cardQuestao.classList.remove('hidden');
-
-    // Escolhe aleatoriamente uma das candidatas
-    const idx = Math.floor(Math.random() * candidatas.length);
-    questaoAtual = candidatas[idx];
-
+    questaoAtual = questoesFilaRodada.shift();
     renderizarQuestao(questaoAtual);
+    atualizarResumoTopo();
   }
 
   // --- Renderizar Questão na Tela ---
   function renderizarQuestao(q) {
     badgeTema.textContent = q.tema || 'Geral';
     badgeAssunto.textContent = q.assunto || 'Tópico';
-    badgeId.textContent = `#${q.id}`;
+    badgeId.innerHTML = `#${q.id} ${q.isEmbaralhada ? '<span class="text-purple-400 font-bold ml-1" title="Ordem das alternativas reorganizada para evitar decoreba">🔀 Reforço</span>' : ''}`;
     txtEnunciado.textContent = q.enunciado;
 
     containerOpcoes.innerHTML = '';
@@ -278,7 +399,6 @@
       opcaoSelecionada = id;
       btnConfirmar.disabled = false;
 
-      // Limpar seleções anteriores
       const allBtns = containerOpcoes.querySelectorAll('.opcao-btn');
       allBtns.forEach(b => {
         b.classList.remove('border-amber-500', 'bg-amber-500/10', 'text-amber-300');
@@ -286,7 +406,6 @@
         indicador.classList.remove('bg-amber-500', 'text-slate-950', 'border-amber-400');
       });
 
-      // Destacar selecionado
       btnElement.classList.add('border-amber-500', 'bg-amber-500/10', 'text-amber-300');
       const ind = btnElement.querySelector('.letra-indicador');
       ind.classList.add('bg-amber-500', 'text-slate-950', 'border-amber-400');
@@ -298,16 +417,23 @@
     if (!opcaoSelecionada || !questaoAtual) return;
 
     const acertou = (opcaoSelecionada === questaoAtual.respostaCorreta);
-    
+    respondidasNaRodada++;
+
     // Atualizar conjuntos
     respondidasSet.add(questaoAtual.id);
+    if (cicloAtual >= 2) {
+      respCicloSet.add(questaoAtual.id);
+    }
+
     if (acertou) {
+      acertosNaRodada++;
       errosSet.delete(questaoAtual.id);
     } else {
+      errosNaRodada.push(questaoAtual);
       errosSet.add(questaoAtual.id);
     }
 
-    // Atualizar estatísticas
+    // Estatísticas globais
     statsData.total = (statsData.total || 0) + 1;
     if (acertou) statsData.acertos = (statsData.acertos || 0) + 1;
 
@@ -321,10 +447,10 @@
     salvarStorage();
     atualizarResumoTopo();
 
-    // Estilizar botões de opção
+    // Destaque visual das opções
     const allBtns = containerOpcoes.querySelectorAll('.opcao-btn');
     allBtns.forEach(b => {
-      b.classList.add('pointer-events-none'); // Bloqueia novos cliques
+      b.classList.add('pointer-events-none');
       const id = b.dataset.id;
 
       if (id === questaoAtual.respostaCorreta) {
@@ -340,62 +466,95 @@
       }
     });
 
-    // Configurar Caixa de Explicação Comentada
+    // Caixa de Fundamentação Legal
     boxExplicacao.classList.remove('hidden');
     if (acertou) {
       boxExplicacao.className = 'mt-6 p-4 sm:p-5 rounded-xl border border-emerald-500/40 bg-emerald-950/20 text-emerald-200';
       feedbackTitle.innerHTML = `
         <svg class="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-        <span class="text-emerald-400 text-sm font-bold">Resposta Correta!</span>
+        <span class="text-emerald-400 text-sm font-bold">Resposta Correta! Parabéns.</span>
       `;
     } else {
       boxExplicacao.className = 'mt-6 p-4 sm:p-5 rounded-xl border border-rose-500/40 bg-rose-950/20 text-rose-200';
       feedbackTitle.innerHTML = `
         <svg class="w-5 h-5 text-rose-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path></svg>
-        <span class="text-rose-400 text-sm font-bold">Resposta Incorreta! A correta é a letra ${questaoAtual.respostaCorreta}.</span>
+        <span class="text-rose-400 text-sm font-bold">Resposta Incorreta! A opção correta é a letra ${questaoAtual.respostaCorreta}.</span>
       `;
     }
 
     feedbackContent.innerHTML = `
       <div class="pt-1 border-t border-slate-700/50">
-        <span class="font-bold uppercase tracking-wider text-[11px] text-amber-400 block mb-1">Fundamentação Legal & Comentário:</span>
-        <p class="text-slate-300 leading-relaxed text-xs sm:text-sm whitespace-pre-line">${questaoAtual.explicacao || 'Sem comentário detalhado registrado.'}</p>
+        <span class="font-bold uppercase tracking-wider text-[11px] text-amber-400 block mb-1">Fundamentação Jurídica & Justificativa:</span>
+        <p class="text-slate-300 leading-relaxed text-xs sm:text-sm whitespace-pre-line">${questaoAtual.explicacao || 'Sem comentário cadastrado.'}</p>
       </div>
     `;
 
     // Alternar botões
     btnConfirmar.classList.add('hidden');
     btnProxima.classList.remove('hidden');
+
+    if (questoesFilaRodada.length === 0) {
+      btnProxima.querySelector('span').textContent = 'Concluir Rodada';
+    } else {
+      btnProxima.querySelector('span').textContent = 'Próxima Pergunta';
+    }
+  }
+
+  // --- Finalizar Rodada e Exibir Placar ---
+  function finalizarRodada() {
+    cardQuestao.classList.add('hidden');
+    cardCompletado.classList.add('hidden');
+    cardFimRodada.classList.remove('hidden');
+
+    numRodadaConcluida.textContent = numeroRodada;
+    txtQuestoesRodada.textContent = respondidasNaRodada;
+    rodadaAcertos.textContent = acertosNaRodada;
+    rodadaErros.textContent = errosNaRodada.length;
+
+    const pct = respondidasNaRodada > 0 ? Math.round((acertosNaRodada / respondidasNaRodada) * 100) : 0;
+    rodadaPct.textContent = `${pct}%`;
+
+    const ineditas = obterQuestoesIneditasRestantes();
+    rodadaIneditasRestantes.textContent = ineditas.length;
+
+    if (errosNaRodada.length > 0) {
+      btnRevisarErrosRodada.classList.remove('hidden');
+      btnRevisarErrosRodada.textContent = `Revisar ${errosNaRodada.length} Erro(s)`;
+    } else {
+      btnRevisarErrosRodada.classList.add('hidden');
+    }
+
+    if (ineditas.length === 0) {
+      btnProximaRodada.innerHTML = `<span>🎓 Concluir e Iniciar Modo Reforço</span>`;
+    } else {
+      btnProximaRodada.innerHTML = `<span>🚀 Próxima Rodada (${Math.min(tamanhoRodada, ineditas.length)} Inéditas)</span>`;
+    }
   }
 
   // --- Atualizar Contadores do Topo ---
   function atualizarResumoTopo() {
+    lblRodadaAtual.textContent = `Rodada ${numeroRodada}`;
+    lblProgressoRodada.textContent = `${respondidasNaRodada}/${tamanhoRodada}`;
+
+    if (cicloAtual >= 2) {
+      badgeCiclo.classList.remove('hidden');
+      badgeCiclo.textContent = `🔄 Ciclo ${cicloAtual} (Reforço)`;
+    } else {
+      badgeCiclo.classList.add('hidden');
+    }
+
+    const ineditas = obterQuestoesIneditasRestantes();
+    lblRestantes.textContent = ineditas.length;
+
     countErrosBadge.textContent = errosSet.size;
 
     const total = statsData.total || 0;
     const acertos = statsData.acertos || 0;
     const taxa = total > 0 ? Math.round((acertos / total) * 100) : 0;
-
     lblTaxaAcerto.textContent = `${taxa}%`;
   }
 
-  // --- Reiniciar Ciclo Atual ---
-  function reiniciarCicloAtual() {
-    const modo = selectMode.value;
-    const questoesNoFiltro = obterQuestoesFiltradas();
-
-    if (modo === 'erros') {
-      errosSet.clear();
-    } else {
-      // Remove do conjunto de respondidas apenas as do filtro atual
-      questoesNoFiltro.forEach(q => respondidasSet.delete(q.id));
-    }
-
-    salvarStorage();
-    carregarProximaQuestao();
-  }
-
-  // --- Renderizar Modal de Estatísticas ---
+  // --- Modal de Estatísticas ---
   function abrirModalStats() {
     statTotal.textContent = statsData.total || 0;
     statAcertos.textContent = statsData.acertos || 0;
@@ -440,14 +599,12 @@
       const parsed = JSON.parse(raw);
       if (!Array.isArray(parsed)) throw new Error('O JSON deve ser uma lista (array) de questões.');
 
-      // Validar estrutura básica
       for (const q of parsed) {
         if (!q.id || !q.enunciado || !q.opcoes || !q.respostaCorreta) {
           throw new Error('Cada questão precisa ter ao menos: id, enunciado, opcoes e respostaCorreta.');
         }
       }
 
-      // Salvar no localStorage de custom
       let custom = [];
       const stored = localStorage.getItem(STORAGE_CUSTOM_QUESTOES);
       if (stored) custom = JSON.parse(stored);
@@ -463,10 +620,9 @@
       modalImport.classList.add('hidden');
       modalImport.classList.remove('flex');
 
-      // Recarrega banco
       carregarQuestoes().then(() => {
         atualizarFiltros();
-        carregarProximaQuestao();
+        iniciarNovaRodada();
       });
 
     } catch (err) {
@@ -478,32 +634,82 @@
   function registrarEventos() {
     selectMode.addEventListener('change', () => {
       atualizarFiltros();
-      carregarProximaQuestao();
+      numeroRodada = 1;
+      iniciarNovaRodada();
     });
 
     selectTema.addEventListener('change', () => {
       atualizarAssuntos();
-      carregarProximaQuestao();
+      numeroRodada = 1;
+      iniciarNovaRodada();
     });
 
     selectAssunto.addEventListener('change', () => {
-      carregarProximaQuestao();
+      numeroRodada = 1;
+      iniciarNovaRodada();
+    });
+
+    selectTamanhoRodada.addEventListener('change', (e) => {
+      tamanhoRodada = parseInt(e.target.value, 10) || 10;
+      salvarStorage();
+      numeroRodada = 1;
+      iniciarNovaRodada();
     });
 
     btnConfirmar.addEventListener('click', confirmarResposta);
-    btnProxima.addEventListener('click', carregarProximaQuestao);
+    btnProxima.addEventListener('click', carregarProximaQuestaoDaFila);
 
-    btnResetProgress.addEventListener('click', () => {
-      if (confirm('Deseja reiniciar as questões respondidas do filtro atual?')) {
-        reiniciarCicloAtual();
+    // Botões da Rodada
+    btnProximaRodada.addEventListener('click', () => {
+      const ineditas = obterQuestoesIneditasRestantes();
+      if (ineditas.length === 0 && cicloAtual === 1) {
+        // Ativar modo reforço
+        cicloAtual = 2;
+        respCicloSet.clear();
+        salvarStorage();
+      }
+      numeroRodada++;
+      iniciarNovaRodada();
+    });
+
+    btnRevisarErrosRodada.addEventListener('click', () => {
+      if (errosNaRodada.length > 0) {
+        cardFimRodada.classList.add('hidden');
+        cardQuestao.classList.remove('hidden');
+        questoesFilaRodada = errosNaRodada.map(q => ({ ...q }));
+        respondidasNaRodada = 0;
+        acertosNaRodada = 0;
+        errosNaRodada = [];
+        carregarProximaQuestaoDaFila();
       }
     });
 
-    btnReiniciarFiltro.addEventListener('click', reiniciarCicloAtual);
-    btnIrParaErros.addEventListener('click', () => {
-      selectMode.value = 'erros';
-      atualizarFiltros();
-      carregarProximaQuestao();
+    // Botão de Iniciar Ciclo de Reforço quando 100% esgotado
+    btnIniciarCicloReforco.addEventListener('click', () => {
+      cicloAtual = Math.max(2, cicloAtual + 1);
+      respCicloSet.clear();
+      salvarStorage();
+      numeroRodada = 1;
+      iniciarNovaRodada();
+    });
+
+    btnAbrirImportador.addEventListener('click', () => {
+      modalImport.classList.remove('hidden');
+      modalImport.classList.add('flex');
+    });
+
+    btnResetProgress.addEventListener('click', () => {
+      if (confirm('Deseja reiniciar as questões respondidas deste filtro e começar uma nova rodada de inéditas?')) {
+        const questoesNoFiltro = obterQuestoesFiltradas();
+        questoesNoFiltro.forEach(q => {
+          respondidasSet.delete(q.id);
+          respCicloSet.delete(q.id);
+        });
+        cicloAtual = 1;
+        numeroRodada = 1;
+        salvarStorage();
+        iniciarNovaRodada();
+      }
     });
 
     // Modais
@@ -549,12 +755,17 @@
         localStorage.removeItem(STORAGE_RESPONDIDAS);
         localStorage.removeItem(STORAGE_ERROS);
         localStorage.removeItem(STORAGE_STATS);
+        localStorage.removeItem(STORAGE_CICLO);
+        localStorage.removeItem(STORAGE_RESP_CICLO);
         respondidasSet.clear();
         errosSet.clear();
+        respCicloSet.clear();
         statsData = { total: 0, acertos: 0, porTema: {} };
+        cicloAtual = 1;
+        numeroRodada = 1;
         salvarStorage();
         abrirModalStats();
-        carregarProximaQuestao();
+        iniciarNovaRodada();
       }
     });
 
@@ -576,7 +787,6 @@
             deferredInstallPrompt = null;
           }
         } else {
-          // Exibe modal explicativo (Safari / navegadores sem prompt automático)
           modalInstall.classList.remove('hidden');
           modalInstall.classList.add('flex');
         }
@@ -597,7 +807,6 @@
       });
     }
 
-    // Registrar Service Worker para permitir instalação nativa
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('./sw.js').catch(err => {
         console.log('Falha ao registrar Service Worker:', err);

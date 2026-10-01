@@ -5,10 +5,22 @@
     "assunto": "CEDPM - Lei Estadual nº 14.310/2002",
     "enunciado": "Nos termos do Código de Ética e Disciplina dos Militares do Estado de Minas Gerais (Lei nº 14.310/2002), sobre as transgressões disciplinares e suas classificações, assinale a alternativa CORRETA:",
     "opcoes": [
-      { "id": "A", "texto": "A transgressão disciplinar classifica-se exclusivamente em grave e leve, inexistindo a gradação média no regime do CEDPM." },
-      { "id": "B", "texto": "As transgressões disciplinares classificam-se em graves, médias e leves, conforme a gradação da falta cometida e suas repercussões." },
-      { "id": "C", "texto": "O militar na reserva remunerada não comete transgressão de natureza grave, aplicando-se-lhe somente sanções de advertência." },
-      { "id": "D", "texto": "A advertência é sanção disciplinar prevista expressamente no rol taxativo do art. 24 do CEDPM." }
+      {
+        "id": "A",
+        "texto": "A transgressão disciplinar classifica-se exclusivamente em grave e leve, inexistindo a gradação média no regime do CEDPM."
+      },
+      {
+        "id": "B",
+        "texto": "As transgressões disciplinares classificam-se em graves, médias e leves, conforme a gradação da falta cometida e suas repercussões."
+      },
+      {
+        "id": "C",
+        "texto": "O militar na reserva remunerada não comete transgressão de natureza grave, aplicando-se-lhe somente sanções de advertência."
+      },
+      {
+        "id": "D",
+        "texto": "A advertência é sanção disciplinar prevista expressamente no rol taxativo do art. 24 do CEDPM."
+      }
     ],
     "respostaCorreta": "B",
     "explicacao": "Conforme o art. 12 do CEDPM (Lei Estadual nº 14.310/2002), as transgressões disciplinares são classificadas em: I - graves; II - médias; III - leves. A classificação depende da gravidade do fato e de seus reflexos no serviço ou na disciplina. Vale lembrar que a sanção disciplinar não inclui advertência (as sanções do art. 24 são: repreensão, prestação de serviço, suspensão e demissão)."
@@ -19,10 +31,22 @@
     "assunto": "CEDPM - Lei Estadual nº 14.310/2002",
     "enunciado": "A respeito das causas de justificação previstas no CEDPM (Lei nº 14.310/2002), haverá causa de justificação quando a infração disciplinar for cometida:",
     "opcoes": [
-      { "id": "A", "texto": "Em legítima defesa própria ou de outrem, ou em estado de necessidade." },
-      { "id": "B", "texto": "Por motivo de relevante valor moral particular, ainda que sem autorização superior." },
-      { "id": "C", "texto": "Sob coação moral irresistível, circunstância que configura apenas causa atenuante da pena." },
-      { "id": "D", "texto": "Por militar com mais de dez anos de efetivo serviço sem qualquer punição anterior." }
+      {
+        "id": "A",
+        "texto": "Em legítima defesa própria ou de outrem, ou em estado de necessidade."
+      },
+      {
+        "id": "B",
+        "texto": "Por motivo de relevante valor moral particular, ainda que sem autorização superior."
+      },
+      {
+        "id": "C",
+        "texto": "Sob coação moral irresistível, circunstância que configura apenas causa atenuante da pena."
+      },
+      {
+        "id": "D",
+        "texto": "Por militar com mais de dez anos de efetivo serviço sem qualquer punição anterior."
+      }
     ],
     "respostaCorreta": "A",
     "explicacao": "O art. 19 do CEDPM estabelece que 'Haverá causa de justificação quando qualquer ação for praticada: I - em legítima defesa própria ou de terceiros; II - em estado de necessidade; III - em estrito cumprimento de dever legal ou no exercício regular de direito; IV - por motivo de força maior ou caso fortuito devidamente comprovados; V - sob coação irresistível'. Quando comprovada a causa de justificação, não haverá punição disciplinar."
@@ -33,10 +57,22 @@
     "assunto": "EMEMG - Lei Estadual nº 5.301/1969",
     "enunciado": "Conforme o Estatuto dos Militares do Estado de Minas Gerais (Lei Estadual nº 5.301/1969), o militar que se afastar temporariamente do serviço ativo por ter sido considerado extraviado ou desaparecido permanecerá na situação de:",
     "opcoes": [
-      { "id": "A", "texto": "Disponibilidade remunerada." },
-      { "id": "B", "texto": "Licença ex-officio sem remuneração." },
-      { "id": "C", "texto": "Agregação." },
-      { "id": "D", "texto": "Reserva não remunerada imediata." }
+      {
+        "id": "A",
+        "texto": "Disponibilidade remunerada."
+      },
+      {
+        "id": "B",
+        "texto": "Licença ex-officio sem remuneração."
+      },
+      {
+        "id": "C",
+        "texto": "Agregação."
+      },
+      {
+        "id": "D",
+        "texto": "Reserva não remunerada imediata."
+      }
     ],
     "respostaCorreta": "C",
     "explicacao": "Nos termos do EMEMG (Lei Estadual nº 5.301/1969), a agregação é a situação na qual o militar da ativa deixa de ocupar vaga na escala hierárquica do seu quadro, nela permanecendo sem número. Isso ocorre, entre outros casos, quando o militar for considerado extraviado, desaparecido, ou quando for colocado à disposição de outro órgão público pelo prazo legal."
@@ -47,10 +83,22 @@
     "assunto": "Crimes Militares e Competência",
     "enunciado": "Sobre a Lei nº 13.491/2017, que alterou o art. 9º do Código Penal Militar (Decreto-Lei nº 1.001/1969), assinale a afirmativa CORRETA:",
     "opcoes": [
-      { "id": "A", "texto": "Os crimes comuns previstos na legislação penal extravagante não podem, em nenhuma hipótese, ser considerados crimes militares por extensão." },
-      { "id": "B", "texto": "Os crimes previstos no Código Penal e na legislação penal extravagante, quando praticados por militar em serviço ou em razão da função nas condições do art. 9º, II, passam a ser de competência da Justiça Militar estadual, ressalvados os dolosos contra a vida de civil." },
-      { "id": "C", "texto": "O crime doloso contra a vida praticado por militar estadual em serviço contra civil será julgado pela Justiça Militar estadual mediante auditoria militar." },
-      { "id": "D", "texto": "A Lei nº 13.491/2017 restringiu o rol de crimes militares, limitando-os apenas àqueles expressos na Parte Especial do CPM." }
+      {
+        "id": "A",
+        "texto": "Os crimes comuns previstos na legislação penal extravagante não podem, em nenhuma hipótese, ser considerados crimes militares por extensão."
+      },
+      {
+        "id": "B",
+        "texto": "Os crimes previstos no Código Penal e na legislação penal extravagante, quando praticados por militar em serviço ou em razão da função nas condições do art. 9º, II, passam a ser de competência da Justiça Militar estadual, ressalvados os dolosos contra a vida de civil."
+      },
+      {
+        "id": "C",
+        "texto": "O crime doloso contra a vida praticado por militar estadual em serviço contra civil será julgado pela Justiça Militar estadual mediante auditoria militar."
+      },
+      {
+        "id": "D",
+        "texto": "A Lei nº 13.491/2017 restringiu o rol de crimes militares, limitando-os apenas àqueles expressos na Parte Especial do CPM."
+      }
     ],
     "respostaCorreta": "B",
     "explicacao": "A Lei 13.491/2017 ampliou substancialmente o conceito de crime militar, criando os 'crimes militares por extensão' (qualquer crime da legislação penal comum praticado nas condições do art. 9º, II do CPM). No entanto, pela Constituição Federal (art. 125, § 4º) e pelo art. 9º, § 1º do CPM, os crimes dolosos contra a vida praticados por militares estaduais contra civil são de competência exclusiva do Tribunal do Júri (Justiça Comum Estadual)."
@@ -61,10 +109,22 @@
     "assunto": "Crimes Contra a Autoridade Militar",
     "enunciado": "No Código Penal Militar, o crime de 'Motim' (art. 149) distingue-se do crime de 'Revolta' (art. 149, parágrafo único) fundamentalmente pelo fato de que:",
     "opcoes": [
-      { "id": "A", "texto": "A Revolta é praticada por militares isolados, ao passo que o Motim exige a reunião de pelo menos 10 militares." },
-      { "id": "B", "texto": "A Revolta exige que os agentes participantes do motim estejam armados." },
-      { "id": "C", "texto": "O Motim só ocorre em tempo de guerra, e a Revolta ocorre apenas em tempo de paz." },
-      { "id": "D", "texto": "O Motim prescinde de ação coletiva concertada, enquanto a Revolta pressupõe violência com lesão corporal grave consumada." }
+      {
+        "id": "A",
+        "texto": "A Revolta é praticada por militares isolados, ao passo que o Motim exige a reunião de pelo menos 10 militares."
+      },
+      {
+        "id": "B",
+        "texto": "A Revolta exige que os agentes participantes do motim estejam armados."
+      },
+      {
+        "id": "C",
+        "texto": "O Motim só ocorre em tempo de guerra, e a Revolta ocorre apenas em tempo de paz."
+      },
+      {
+        "id": "D",
+        "texto": "O Motim prescinde de ação coletiva concertada, enquanto a Revolta pressupõe violência com lesão corporal grave consumada."
+      }
     ],
     "respostaCorreta": "B",
     "explicacao": "Nos termos do art. 149 do CPM, o crime de Motim ocorre quando militares reunidos desobedecem ou praticam atos contra a ordem de superior. A qualificadora/figura da 'Revolta' (parágrafo único do art. 149) configura-se quando os agentes participantes do motim estão ARMADOS (arma de fogo ou branca, própria ou imprópria)."
@@ -75,10 +135,22 @@
     "assunto": "Uso Diferenciado da Força",
     "enunciado": "A respeito do Modelo de Uso Diferenciado da Força adotado na doutrina da PMMG, assinale a opção que apresenta um de seus princípios basilares indispensáveis:",
     "opcoes": [
-      { "id": "A", "texto": "Antecipação tática com emprego imediato de arma de fogo antes de qualquer verbalização preventiva." },
-      { "id": "B", "texto": "Legalidade, Necessidade, Proporcionalidade, Conveniência e Moderação." },
-      { "id": "C", "texto": "Primazia da força física letal nas abordagens de rotina para preservação estrita da soberania estatal." },
-      { "id": "D", "texto": "Exclusividade de técnicas de controle de contato apenas contra indivíduos cooperativos." }
+      {
+        "id": "A",
+        "texto": "Antecipação tática com emprego imediato de arma de fogo antes de qualquer verbalização preventiva."
+      },
+      {
+        "id": "B",
+        "texto": "Legalidade, Necessidade, Proporcionalidade, Conveniência e Moderação."
+      },
+      {
+        "id": "C",
+        "texto": "Primazia da força física letal nas abordagens de rotina para preservação estrita da soberania estatal."
+      },
+      {
+        "id": "D",
+        "texto": "Exclusividade de técnicas de controle de contato apenas contra indivíduos cooperativos."
+      }
     ],
     "respostaCorreta": "B",
     "explicacao": "A doutrina da PMMG (Resolução 4.285/13 e Manuais de Prática Policial) consagra como princípios fundamentais do Uso Diferenciado da Força: Legalidade (previsão em lei), Necessidade (não haver outro meio menos gravoso), Proporcionalidade (intensidade compatível com a ameaça), Conveniência (avaliação do momento oportuno) e Moderação (cessação do uso da força logo após o controle da ameaça)."
@@ -89,10 +161,22 @@
     "assunto": "Procedimento Operacional Padrão (POP)",
     "enunciado": "Segundo os Procedimentos Operacionais Padrão (POP) da PMMG, na realização da abordagem policial de transeunte suspeito, a equipe policial deve estruturar a sua atuação em três papéis bem definidos. São eles:",
     "opcoes": [
-      { "id": "A", "texto": "Comandante, Motorista e Redator de B.O." },
-      { "id": "B", "texto": "Segurança, Abordador e Apoiador (ou Cobertura)." },
-      { "id": "C", "texto": "Perito, Negociador e Investigador." },
-      { "id": "D", "texto": "Escolta primária, Interrogador e Testemunha instrumental." }
+      {
+        "id": "A",
+        "texto": "Comandante, Motorista e Redator de B.O."
+      },
+      {
+        "id": "B",
+        "texto": "Segurança, Abordador e Apoiador (ou Cobertura)."
+      },
+      {
+        "id": "C",
+        "texto": "Perito, Negociador e Investigador."
+      },
+      {
+        "id": "D",
+        "texto": "Escolta primária, Interrogador e Testemunha instrumental."
+      }
     ],
     "respostaCorreta": "B",
     "explicacao": "Na doutrina de abordagem policial da PMMG (POP), a divisão de tarefas táticas em uma guarnição visa garantir a segurança de todos. O militar abordador é responsável pela verbalização, comando e busca pessoal no suspeito, enquanto os demais militares desempenham a cobertura/segurança (atenção visual periférica ao ambiente e pronta reação a qualquer ameaça iminente)."
@@ -103,10 +187,22 @@
     "assunto": "Lei de Abuso de Autoridade - Lei nº 13.869/2019",
     "enunciado": "Para a caracterização dos crimes previstos na Lei de Abuso de Autoridade (Lei nº 13.869/2019), além do dolo comum, exige-se:",
     "opcoes": [
-      { "id": "A", "texto": "Apenas a comprovação de dano patrimonial sofrido pela vítima da conduta." },
-      { "id": "B", "texto": "O dolo específico consistente na finalidade específica de prejudicar outrem ou beneficiar a si mesmo ou a terceiro, ou, ainda, por mero capricho ou satisfação pessoal." },
-      { "id": "C", "texto": "A homologação prévia da conduta ilícita pela Corregedoria do órgão antes do oferecimento da denúncia penal." },
-      { "id": "D", "texto": "Culpa em sentido estrito decorrente de negligência profissional grave." }
+      {
+        "id": "A",
+        "texto": "Apenas a comprovação de dano patrimonial sofrido pela vítima da conduta."
+      },
+      {
+        "id": "B",
+        "texto": "O dolo específico consistente na finalidade específica de prejudicar outrem ou beneficiar a si mesmo ou a terceiro, ou, ainda, por mero capricho ou satisfação pessoal."
+      },
+      {
+        "id": "C",
+        "texto": "A homologação prévia da conduta ilícita pela Corregedoria do órgão antes do oferecimento da denúncia penal."
+      },
+      {
+        "id": "D",
+        "texto": "Culpa em sentido estrito decorrente de negligência profissional grave."
+      }
     ],
     "respostaCorreta": "B",
     "explicacao": "O art. 1º, § 1º da Lei nº 13.869/2019 estabelece expressamente que as condutas descritas constituem crime de abuso de autoridade quando praticadas pelo agente com a finalidade específica de prejudicar outrem ou beneficiar a si mesmo ou a terceiro, ou, ainda, por mero capricho ou satisfação pessoal (elemento subjetivo especial do tipo ou dolo específico). Além disso, o § 2º ressalva expressamente que a divergência na interpretação de lei ou na avaliação de fatos e provas não configura abuso de autoridade."
@@ -117,10 +213,22 @@
     "assunto": "Lei Maria da Penha - Lei nº 11.340/2006",
     "enunciado": "Policial militar, acionado via COPOM, depara-se com um agressor que acabou de descumprir expressa decisão judicial que deferiu medidas protetivas de urgência em favor de sua ex-companheira. De acordo com o art. 24-A da Lei nº 11.340/2006, o policial militar deve:",
     "opcoes": [
-      { "id": "A", "texto": "Apenas lavrar Termo Circunstanciado de Ocorrência (TCO), por se tratar de crime de menor potencial ofensivo que não admite flagrante." },
-      { "id": "B", "texto": "Efetuar a prisão em flagrante delito do autor pelo crime autônomo de descumprimento de medidas protetivas de urgência." },
-      { "id": "C", "texto": "Orientar o autor a comparecer espontaneamente ao fórum no dia útil seguinte, sem condução coercitiva." },
-      { "id": "D", "texto": "Arbitrar fiança imediatamente no local dos fatos, caso o agressor seja primário." }
+      {
+        "id": "A",
+        "texto": "Apenas lavrar Termo Circunstanciado de Ocorrência (TCO), por se tratar de crime de menor potencial ofensivo que não admite flagrante."
+      },
+      {
+        "id": "B",
+        "texto": "Efetuar a prisão em flagrante delito do autor pelo crime autônomo de descumprimento de medidas protetivas de urgência."
+      },
+      {
+        "id": "C",
+        "texto": "Orientar o autor a comparecer espontaneamente ao fórum no dia útil seguinte, sem condução coercitiva."
+      },
+      {
+        "id": "D",
+        "texto": "Arbitrar fiança imediatamente no local dos fatos, caso o agressor seja primário."
+      }
     ],
     "respostaCorreta": "B",
     "explicacao": "O art. 24-A da Lei Maria da Penha criminalizou o descumprimento de decisão judicial que defere medidas protetivas de urgência (pena de detenção de 3 meses a 2 anos). O policial militar deve efetuar a prisão em flagrante delito e conduzir o autor à Delegacia de Polícia. Importante: na fase policial, apenas a autoridade judicial poderá conceder fiança (§ 2º do art. 24-A), ou seja, nem o delegado de polícia pode arbitrar fiança nesse crime."
@@ -131,12 +239,1844 @@
     "assunto": "CEDPM - Lei Estadual nº 14.310/2002",
     "enunciado": "No âmbito do processo disciplinar regido pelo CEDPM (Lei nº 14.310/2002), sobre os prazos para interposição de recursos disciplinares e a garantia da ampla defesa, assinale a opção CORRETA:",
     "opcoes": [
-      { "id": "A", "texto": "O militar não tem direito a recurso das sanções de prestação de serviços ou repreensão, cabendo recurso somente em caso de demissão." },
-      { "id": "B", "texto": "O prazo para interposição de recurso disciplinar é de 5 (cinco) dias úteis, contados da data em que o militar tomar conhecimento oficial da decisão." },
-      { "id": "C", "texto": "O recurso disciplinar possui efeito suspensivo automático e indefectível para todas as sanções disciplinares." },
-      { "id": "D", "texto": "O militar deve recolher custas administrativas recursais previamente para que seu recurso seja recebido pela autoridade julgadora." }
+      {
+        "id": "A",
+        "texto": "O militar não tem direito a recurso das sanções de prestação de serviços ou repreensão, cabendo recurso somente em caso de demissão."
+      },
+      {
+        "id": "B",
+        "texto": "O prazo para interposição de recurso disciplinar é de 5 (cinco) dias úteis, contados da data em que o militar tomar conhecimento oficial da decisão."
+      },
+      {
+        "id": "C",
+        "texto": "O recurso disciplinar possui efeito suspensivo automático e indefectível para todas as sanções disciplinares."
+      },
+      {
+        "id": "D",
+        "texto": "O militar deve recolher custas administrativas recursais previamente para que seu recurso seja recebido pela autoridade julgadora."
+      }
     ],
     "respostaCorreta": "B",
     "explicacao": "Conforme o art. 61 e seguintes do CEDPM (Lei nº 14.310/2002), o militar punido tem o direito de interpor Pedido de Reconsideração de Ato ou Recurso Disciplinar no prazo de 5 (cinco) dias úteis, a contar do primeiro dia útil seguinte ao da notificação oficial ou publicação da sanção em boletim."
+  },
+  {
+    "id": "eap-pmmg-011",
+    "tema": "Legislação Institucional",
+    "assunto": "CEDPM - Lei Estadual nº 14.310/2002",
+    "enunciado": "Nos termos do CEDPM (Lei nº 14.310/2002), sobre a prescrição da ação disciplinar, assinale a alternativa CORRETA:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "A ação disciplinar prescreve em 1 (um) ano para as transgressões leves e médias, e em 2 (dois) anos para as transgressões graves, contados da data em que o fato ocorreu."
+      },
+      {
+        "id": "B",
+        "texto": "A ação disciplinar prescreve uniformemente em 5 (cinco) anos para qualquer tipo de transgressão militar."
+      },
+      {
+        "id": "C",
+        "texto": "As transgressões disciplinares de natureza grave são imprescritíveis no âmbito da PMMG."
+      },
+      {
+        "id": "D",
+        "texto": "A prescrição da transgressão disciplinar que também constituir crime regular-se-á pelo prazo fixado para as transgressões leves."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "Conforme o art. 90 do CEDPM (Lei nº 14.310/2002), a ação disciplinar prescreve em: I - um ano para as faltas leves e médias; II - dois anos para as faltas graves. Se a falta disciplinar também for prevista na lei penal como crime, a prescrição da ação disciplinar regular-se-á pelo prazo da lei penal."
+  },
+  {
+    "id": "eap-pmmg-012",
+    "tema": "Legislação Institucional",
+    "assunto": "CEDPM - Lei Estadual nº 14.310/2002",
+    "enunciado": "A respeito do rol de sanções disciplinares aplicáveis aos militares estaduais de Minas Gerais, segundo o art. 24 do CEDPM, assinale a opção que contém APENAS sanções legalmente previstas:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Advertência verbal, repreensão e prisão em cela disciplinar."
+      },
+      {
+        "id": "B",
+        "texto": "Repreensão, prestação de serviço disciplinar, suspensão e demissão."
+      },
+      {
+        "id": "C",
+        "texto": "Detenção disciplinar, cassação de aposentadoria e censura escrita."
+      },
+      {
+        "id": "D",
+        "texto": "Multa pecuniária, recolhimento compulsório e suspensão de porte de arma."
+      }
+    ],
+    "respostaCorreta": "B",
+    "explicacao": "O art. 24 do CEDPM prevê taxativamente as seguintes sanções disciplinares: I - repreensão; II - prestação de serviço disciplinar; III - suspensão; IV - demissão; V - perda do posto, patente ou graduação. Na PMMG não existem sanções privativas de liberdade (prisão/detenção disciplinar) e nem advertência verbal."
+  },
+  {
+    "id": "eap-pmmg-013",
+    "tema": "Legislação Institucional",
+    "assunto": "EMEMG - Lei Estadual nº 5.301/1969",
+    "enunciado": "De acordo com o Estatuto dos Militares de Minas Gerais (Lei nº 5.301/1969), a promoção que decorre do reconhecimento de ato ou atos extraordinários de coragem e desprendimento no cumprimento do dever policial militar é denominada promoção por:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Merecimento especial com louvor."
+      },
+      {
+        "id": "B",
+        "texto": "Bravura."
+      },
+      {
+        "id": "C",
+        "texto": "Antiguidade qualificada."
+      },
+      {
+        "id": "D",
+        "texto": "Escolha governamental."
+      }
+    ],
+    "respostaCorreta": "B",
+    "explicacao": "A promoção por bravura decorre de ato ou atos extraordinários de desprendimento e coragem no cumprimento do dever, com evidente risco à própria vida, ultrapassando os limites normais da ação militar. Independe de vaga e do cumprimento de interstício legal."
+  },
+  {
+    "id": "eap-pmmg-014",
+    "tema": "Legislação Institucional",
+    "assunto": "EMEMG - Lei Estadual nº 5.301/1969",
+    "enunciado": "Segundo o Estatuto dos Militares (Lei 5.301/1969), o militar estadual da ativa que for eleito para mandato eletivo político, tendo mais de 10 (dez) anos de serviço:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Será automaticamente demitido da corporação sem qualquer remuneração proporcional."
+      },
+      {
+        "id": "B",
+        "texto": "Passará para a inatividade (reserva remunerada), proporcionalmente ao tempo de serviço, no ato da diplomação."
+      },
+      {
+        "id": "C",
+        "texto": "Permanecerá na ativa prestando expediente administrativo enquanto durar o mandato parlamentar."
+      },
+      {
+        "id": "D",
+        "texto": "Deverá renunciar ao mandato eletivo após 2 anos ou perderá os direitos previdenciários."
+      }
+    ],
+    "respostaCorreta": "B",
+    "explicacao": "Conforme a Constituição Federal (art. 14, § 8º) e o EMEMG, o militar com mais de 10 anos de serviço que for eleito será transferido para a inatividade (reserva remunerada com proventos proporcionais) no momento da diplomação pelo Tribunal Eleitoral."
+  },
+  {
+    "id": "eap-pmmg-015",
+    "tema": "Direito Penal Militar",
+    "assunto": "Crimes Militares em Espécie (CPM)",
+    "enunciado": "O policial militar que, sem licença, afasta-se de sua unidade ou do lugar onde deve permanecer por mais de 8 (oito) dias comete o crime militar de:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Abandono de posto."
+      },
+      {
+        "id": "B",
+        "texto": "Deserção."
+      },
+      {
+        "id": "C",
+        "texto": "Prevaricação militar."
+      },
+      {
+        "id": "D",
+        "texto": "Desobediência continuada."
+      }
+    ],
+    "respostaCorreta": "B",
+    "explicacao": "O crime de Deserção (art. 187 do CPM) tipifica a ausência injustificada do militar de sua organização ou posto por mais de 8 (oito) dias. O prazo de graça começa a contar da meia-noite do dia em que se verificar a falta injustificada."
+  },
+  {
+    "id": "eap-pmmg-016",
+    "tema": "Direito Penal Militar",
+    "assunto": "Crimes Militares em Espécie (CPM)",
+    "enunciado": "O militar estadual que abandona, sem ordem superior, o posto ou lugar de serviço que lhe tenha sido designado, ou o serviço que lhe cumpria, antes de terminá-lo, comete o crime de:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Abandono de posto (art. 195 do CPM)."
+      },
+      {
+        "id": "B",
+        "texto": "Deserção qualificada."
+      },
+      {
+        "id": "C",
+        "texto": "Insubordinação tentada."
+      },
+      {
+        "id": "D",
+        "texto": "Condescendência criminosa."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "O crime de Abandono de Posto (art. 195 do Código Penal Militar) é crime militar próprio e formal de perigo abstrato. Consuma-se no exato momento em que o militar se afasta fisicamente do posto ou serviço sem autorização superior competente, independentemente de ter ocorrido dano ou prejuízo concreto."
+  },
+  {
+    "id": "eap-pmmg-017",
+    "tema": "Direito Penal Militar",
+    "assunto": "Crimes Militares em Espécie (CPM)",
+    "enunciado": "Exigir, para si ou para outrem, direta ou indiretamente, ainda que fora da função ou antes de assumi-la, mas em razão dela, vantagem indevida, configura no Código Penal Militar o crime de:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Corrupção passiva militar (art. 308)."
+      },
+      {
+        "id": "B",
+        "texto": "Concussão (art. 305)."
+      },
+      {
+        "id": "C",
+        "texto": "Extorsão simples militar."
+      },
+      {
+        "id": "D",
+        "texto": "Peculato-apropriação."
+      }
+    ],
+    "respostaCorreta": "B",
+    "explicacao": "Conforme o art. 305 do CPM, o crime de Concussão caracteriza-se pelo verbo nuclear 'EXIGIR' vantagem indevida em razão da função pública militar. Diferencia-se da corrupção passiva (art. 308), cujo núcleo é 'solicitar ou receber'."
+  },
+  {
+    "id": "eap-pmmg-018",
+    "tema": "Direito Processual Penal Militar",
+    "assunto": "Inquérito Policial Militar (CPPM)",
+    "enunciado": "Nos termos do art. 20 do Código de Processo Penal Militar (CPPM), o Inquérito Policial Militar (IPM) deverá ser concluído no prazo de:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "10 dias se o indiciado estiver preso, e 30 dias se solto."
+      },
+      {
+        "id": "B",
+        "texto": "20 dias se o indiciado estiver preso, e 40 dias se solto (este prorrogável por mais 20 dias)."
+      },
+      {
+        "id": "C",
+        "texto": "15 dias em qualquer hipótese, prorrogáveis indefinidamente pelo Encarregado."
+      },
+      {
+        "id": "D",
+        "texto": "30 dias para preso e 60 dias para militar solto."
+      }
+    ],
+    "respostaCorreta": "B",
+    "explicacao": "Art. 20 do CPPM: 'O inquérito deverá terminar dentro em vinte dias, se o indiciado estiver preso, contado esse prazo a partir do dia em que se executar a ordem de prisão; ou no prazo de quarenta dias, quando o indiciado estiver solto, prorrogável por mais vinte dias pela autoridade que determinou a instauração'."
+  },
+  {
+    "id": "eap-pmmg-019",
+    "tema": "Doutrina Operacional e POP",
+    "assunto": "Uso de Algemas e Súmula Vinculante",
+    "enunciado": "A Súmula Vinculante nº 11 do Supremo Tribunal Federal estabelece que o uso de algemas em qualquer pessoa é excepcional, devendo ser justificado por escrito sob pena de nulidade e responsabilidade disciplinar, civil e penal. São os requisitos autorizadores (regra mnemônica PRF):",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Preconceito, Reincidência e Formalidade de polícia."
+      },
+      {
+        "id": "B",
+        "texto": "Perigo à integridade física própria ou alheia, Resistência ou Fundado receio de fuga."
+      },
+      {
+        "id": "C",
+        "texto": "Prisão em flagrante, Repulsa pública e Flagrância imprópria."
+      },
+      {
+        "id": "D",
+        "texto": "Poder discricionário, Risco presumido e Força nominal."
+      }
+    ],
+    "respostaCorreta": "B",
+    "explicacao": "Súmula Vinculante 11 do STF: 'Só é lícito o uso de algemas em casos de resistência e de fundado receio de fuga ou de perigo à integridade física própria ou alheia, por parte do preso ou de terceiros, justificada a excepcionalidade por escrito, sob pena de responsabilidade disciplinar, civil e penal do agente ou da autoridade e de nulidade da prisão ou do ato processual a que se refere'."
+  },
+  {
+    "id": "eap-pmmg-020",
+    "tema": "Doutrina Operacional e POP",
+    "assunto": "Preservação de Local de Crime",
+    "enunciado": "Ao comparecer ao local de um crime violento com vítima em óbito, o primeiro policial militar que chegar deve adotar prioritariamente as seguintes medidas, conforme o POP da PMMG:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Recolher imediatamente cápsulas e estojos caídos no solo para evitar extravio antes da perícia."
+      },
+      {
+        "id": "B",
+        "texto": "Isolar e preservar rigorosamente a área imediata e mediata, impedindo o acesso de curiosos e familiares, mantendo as coisas no estado em que se encontram até a chegada da perícia técnica."
+      },
+      {
+        "id": "C",
+        "texto": "Interrogar testemunhas dentro da faixa de isolamento primária ao lado do cadáver."
+      },
+      {
+        "id": "D",
+        "texto": "Cobrir o corpo com qualquer tecido encontrado na rua e vasculhar os pertences da vítima para qualificação."
+      }
+    ],
+    "respostaCorreta": "B",
+    "explicacao": "O Código de Processo Penal (art. 158-A e seguintes sobre cadeia de custódia) e o POP da PMMG determinam expressamente que a guarnição deve isolar e preservar o local do crime, proibindo a alteração ou toque em qualquer vestígio (como cápsulas, armas e objetos) para não prejudicar a idoneidade da prova pericial."
+  },
+  {
+    "id": "eap-pmmg-021",
+    "tema": "Legislação Extravagante",
+    "assunto": "Lei de Tortura - Lei nº 9.455/1997",
+    "enunciado": "A respeito dos crimes de tortura previstos na Lei nº 9.455/1997 e seus efeitos para os agentes públicos, assinale a opção CORRETA:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "A condenação acarretará a perda do cargo, função ou emprego público e a interdição para seu exercício pelo dobro do prazo da pena aplicada."
+      },
+      {
+        "id": "B",
+        "texto": "O crime de tortura é afiançável e suscetível de graça e anistia, caso o militar réu seja primário."
+      },
+      {
+        "id": "C",
+        "texto": "A perda do cargo público não é efeito automático da condenação, dependendo de fundamentação expressa na sentença."
+      },
+      {
+        "id": "D",
+        "texto": "A tortura praticada por militar em serviço não admite aumento de pena em razão de sua função pública."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "Art. 1º, § 5º da Lei nº 9.455/1997: 'A condenação acarretará a perda do cargo, função ou emprego público e a interdição para seu exercício pelo dobro do prazo da pena aplicada'. Trata-se de efeito automático da condenação, que dispensa motivação judicial adicional."
+  },
+  {
+    "id": "eap-pmmg-022",
+    "tema": "Legislação Extravagante",
+    "assunto": "Estatuto do Desarmamento - Lei nº 10.826/2003",
+    "enunciado": "Nos termos do Estatuto do Desarmamento (Lei nº 10.826/2003) e do Regulamento sobre o porte de arma dos policiais militares:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Os policiais militares têm direito ao porte de arma de fogo com validade em âmbito nacional, inclusive fora de serviço, em conformidade com as normas institucionais."
+      },
+      {
+        "id": "B",
+        "texto": "O militar da ativa só pode portar arma de fogo devidamente uniformizado durante seu turno diário de trabalho."
+      },
+      {
+        "id": "C",
+        "texto": "O militar da reserva remunerada é proibido de portar arma de fogo em qualquer hipótese."
+      },
+      {
+        "id": "D",
+        "texto": "O policial militar pode emprestar sua arma de fogo institucional a parentes civis para segurança residencial."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "O art. 6º, II, da Lei nº 10.826/2003 e as diretrizes regulamentares da PMMG asseguram aos policiais militares o porte de arma de fogo de uso permitido e restrito, institucional ou particular, com eficácia em todo o território nacional, em serviço ou fora dele, ressalvadas as restrições ético-disciplinares e médicas corporativas."
+  },
+  {
+    "id": "eap-pmmg-023",
+    "tema": "Legislação Extravagante",
+    "assunto": "ECA - Lei nº 8.069/1990",
+    "enunciado": "Diante da prática de ato infracional análogo a roubo cometido por adolescente de 16 anos, a guarnição policial militar deve:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Conduzir o adolescente imediatamente em compartimento fechado de viatura (guarda-presos), sem necessidade de justificação."
+      },
+      {
+        "id": "B",
+        "texto": "Apreender o adolescente em flagrante de ato infracional, garantindo seus direitos fundamentais, e conduzi-lo à autoridade policial especializada (Vara/Delegacia de Menores), comunicando imediatamente a apreensão."
+      },
+      {
+        "id": "C",
+        "texto": "Aplicar ao adolescente advertência disciplinar no quartel da PM e liberá-lo no local sem registro."
+      },
+      {
+        "id": "D",
+        "texto": "Lavrar auto de prisão em flagrante delito comum, submetendo o adolescente ao regime carcerário provisório com adultos."
+      }
+    ],
+    "respostaCorreta": "B",
+    "explicacao": "Conforme o Estatuto da Criança e do Adolescente (ECA - Lei nº 8.069/1990), o adolescente apreendido em razão de ato infracional em flagrante deve ser apresentado à autoridade policial competente (Delegacia da Criança/Adolescente). O transporte em compartimento fechado de viatura deve ser evitado ao máximo e só utilizado em casos excepcionais de segurança devidamente justificados."
+  },
+  {
+    "id": "eap-pmmg-024",
+    "tema": "Doutrina Operacional e POP",
+    "assunto": "Emprego e Disparo de Arma de Fogo",
+    "enunciado": "A respeito do chamado 'disparo de advertência' efetuado com arma de fogo em via pública, assinale a orientação expressa da Doutrina Operacional da PMMG e das normas internacionais de direitos humanos:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "É amplamente recomendado antes de qualquer verbalização tática para demonstrar autoridade."
+      },
+      {
+        "id": "B",
+        "texto": "É vedado, pois o projétil disparado para cima ou para o solo pode ricochetear ou atingir inocentes em sua trajetória descendente."
+      },
+      {
+        "id": "C",
+        "texto": "É obrigatório em todas as abordagens de fuga de transeuntes em vias arteriais."
+      },
+      {
+        "id": "D",
+        "texto": "É facultativo a critério individual do policial, desde que o disparo seja efetuado em direção a veículos automotores em movimento."
+      }
+    ],
+    "respostaCorreta": "B",
+    "explicacao": "A Doutrina de Uso Diferenciado da Força da PMMG e as diretrizes do Manual de Prática Policial proíbem expressamente o disparo de advertência. Todo disparo deve ter um alvo legítimo específico respaldado pelas excludentes de ilicitude (legítima defesa diante de agressão injusta e iminente), devido ao risco inaceitável de atingir terceiros inocentes ou causar ricochete."
+  },
+  {
+    "id": "eap-pmmg-025",
+    "tema": "Legislação Institucional",
+    "assunto": "CEDPM - Lei Estadual nº 14.310/2002",
+    "enunciado": "No CEDPM (Lei nº 14.310/2002), são circunstâncias atenuantes no julgamento da transgressão disciplinar:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "O conluio de duas ou mais pessoas para a prática do ato."
+      },
+      {
+        "id": "B",
+        "texto": "Estar classificado no conceito 'A' e ter bons antecedentes funcionais."
+      },
+      {
+        "id": "C",
+        "texto": "Ter sido a transgressão praticada em presença de tropa formada ou de civis."
+      },
+      {
+        "id": "D",
+        "texto": "O abuso de autoridade funcional de superior para inferior."
+      }
+    ],
+    "respostaCorreta": "B",
+    "explicacao": "Conforme o art. 20 do CEDPM, são circunstâncias atenuantes da transgressão disciplinar: bom comportamento funcional anterior, classificação no conceito 'A', tempo de serviço meritório, prestação de serviços relevantes e ter praticado a infração em defesa de terceiro ou de direito próprio sem excesso doloso."
+  },
+  {
+    "id": "eap-pmmg-026",
+    "tema": "Legislação Institucional",
+    "assunto": "CEDPM - Lei Estadual nº 14.310/2002",
+    "enunciado": "Sobre a classificação dos militares quanto ao comportamento no CEDPM (pontuação e conceitos), o militar ingressa na corporação no conceito:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Conceito A, com zero ponto."
+      },
+      {
+        "id": "B",
+        "texto": "Conceito B, com cinquenta pontos positivos."
+      },
+      {
+        "id": "C",
+        "texto": "Conceito C provisório."
+      },
+      {
+        "id": "D",
+        "texto": "Conceito Especial Transitório."
+      }
+    ],
+    "respostaCorreta": "B",
+    "explicacao": "Conforme o art. 85 do CEDPM, os militares são classificados nos seguintes conceitos: Conceito A (com mais de cinquenta pontos positivos); Conceito B (de zero a cinquenta pontos positivos ou até cinquenta pontos negativos); e Conceito C (com mais de cinquenta pontos negativos). Ao ingressar na corporação, o militar é classificado no conceito B com 50 pontos positivos."
+  },
+  {
+    "id": "eap-pmmg-027",
+    "tema": "Direito Penal Militar",
+    "assunto": "Crimes Militares em Espécie (CPM)",
+    "enunciado": "O crime de 'Dormir em serviço' (art. 203 do CPM) consuma-se quando o militar estadual:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Dorme durante as folgas regulamentares dentro do aquartelamento."
+      },
+      {
+        "id": "B",
+        "texto": "Dorme em serviço, como oficial de quarto ou de ronda, ou em posto de sentinela, vigia ou plantão."
+      },
+      {
+        "id": "C",
+        "texto": "Chega atrasado para o plantão com sinais evidentes de sonolência."
+      },
+      {
+        "id": "D",
+        "texto": "Boceja reiteradamente durante formatura militar matinal."
+      }
+    ],
+    "respostaCorreta": "B",
+    "explicacao": "Art. 203 do CPM: 'Dormir o militar, quando em serviço, como oficial de quarto ou de ronda, ou em serviço de sentinela, vigia, plantão às máquinas, ao leme, de ronda ou em qualquer serviço de segurança de posto, assemelhado ou lugar'. É crime militar próprio contra o serviço e o dever militar."
+  },
+  {
+    "id": "eap-pmmg-028",
+    "tema": "Doutrina Operacional e POP",
+    "assunto": "Níveis de Alerta Mental do Policial",
+    "enunciado": "No modelo de preparo mental do policial militar (Cores de Cooper adotadas na doutrina da PMMG), o estado em que o policial está em atenção difusa, ciente do seu entorno e em prontidão relaxada mas vigilante, corresponde à cor:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Branca (desatento, vulnerável)."
+      },
+      {
+        "id": "B",
+        "texto": "Amarela (atenção relaxada, consciência situacional ativa)."
+      },
+      {
+        "id": "C",
+        "texto": "Preta (congelamento por pânico e choque)."
+      },
+      {
+        "id": "D",
+        "texto": "Vermelha (combate armado deflagrado)."
+      }
+    ],
+    "respostaCorreta": "B",
+    "explicacao": "Na escala de prontidão mental de Cooper: Branco = desatenção total (vulnerável); Amarelo = atenção difusa (estado ideal de patrulhamento de rotina, observando pessoas e o ambiente); Laranja = identificação de uma ameaça em potencial (foco direcionado); Vermelho = ação e confronto; Preto = sobrecarga/pânico por falta de preparo."
+  },
+  {
+    "id": "eap-pmmg-029",
+    "tema": "Legislação Extravagante",
+    "assunto": "Lei de Drogas - Lei nº 11.343/2006",
+    "enunciado": "A conduta de adquirir, guardar, tiver em depósito, transportar ou trouxer consigo, para consumo pessoal, drogas sem autorização ou em desacordo com determinação legal (art. 28 da Lei 11.343/2006):",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Foi totalmente descriminalizada pelo STF, não constituindo qualquer espécie de infração no ordenamento jurídico."
+      },
+      {
+        "id": "B",
+        "texto": "Não admite a cominação de pena privativa de liberdade (prisão), aplicando-se apenas penas de advertência sobre os efeitos das drogas, prestação de serviços à comunidade e medida educativa."
+      },
+      {
+        "id": "C",
+        "texto": "Prevê pena de reclusão de 1 a 3 anos em regime fechado obrigatório."
+      },
+      {
+        "id": "D",
+        "texto": "Autoriza a prisão em flagrante delito com recolhimento imediato do autor à carceragem comum."
+      }
+    ],
+    "respostaCorreta": "B",
+    "explicacao": "O art. 28 da Lei nº 11.343/2006 despenalizou (não comina pena de prisão) a posse de drogas para consumo pessoal. As sanções cabíveis são: advertência, prestação de serviços à comunidade e comparecimento a programa ou curso educativo. Não cabe prisão em flagrante, lavrando-se TCO ou termo circunstanciado correspondente com liberação do autor após compromisso de comparecimento."
+  },
+  {
+    "id": "eap-pmmg-030",
+    "tema": "Legislação Institucional",
+    "assunto": "CEDPM - Lei Estadual nº 14.310/2002",
+    "enunciado": "Sobre o cancelamento de sanções disciplinares no registro individual do militar estadual (art. 91 do CEDPM), a sanção de repreensão poderá ser cancelada decorridos:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "2 (dois) anos de efetivo serviço sem qualquer outra punição."
+      },
+      {
+        "id": "B",
+        "texto": "5 (cinco) anos ininterruptos sem punições."
+      },
+      {
+        "id": "C",
+        "texto": "1 (um) ano de efetivo serviço sem cometer nova transgressão."
+      },
+      {
+        "id": "D",
+        "texto": "10 (dez) anos de conduta exemplar."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "Conforme o art. 91 do CEDPM, o cancelamento de registros de sanções disciplinares no prontuário do militar ocorre desde que este não tenha cometido nova transgressão no período: de 2 (dois) anos para a repreensão; de 3 (três) anos para a prestação de serviço disciplinar; e de 4 (quatro) anos para a suspensão."
+  },
+  {
+    "id": "eap-pmmg-031",
+    "tema": "Legislação Institucional",
+    "assunto": "Redação Oficial e Comunicação PMMG",
+    "enunciado": "No âmbito da correspondência e redação oficial da Polícia Militar de Minas Gerais (Instruções e Manual de Redação Oficial), a comunicação interna de caráter eminentemente administrativo, ágil e sucinto, transitada entre chefias ou setores de uma mesma OPM, é o:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Ofício externo com aviso de recebimento."
+      },
+      {
+        "id": "B",
+        "texto": "Memorando."
+      },
+      {
+        "id": "C",
+        "texto": "Edital de citação militar."
+      },
+      {
+        "id": "D",
+        "texto": "Decreto corporativo autônomo."
+      }
+    ],
+    "respostaCorreta": "B",
+    "explicacao": "Na redação oficial padrão da PMMG e da administração pública, o Memorando é a modalidade de comunicação interna entre unidades ou seções da mesma instituição, primando pela celeridade, clareza e concisão no trâmite de informações rotineiras."
+  },
+  {
+    "id": "eap-pmmg-032",
+    "tema": "Direito Penal Militar",
+    "assunto": "Crimes Militares em Espécie (CPM)",
+    "enunciado": "Praticar violência contra superior (art. 157 do CPM) e desrespeitar superior diante de outro militar (art. 160 do CPM) são crimes que tutelam principalmente:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Apenas a honra subjetiva e individual da pessoa física do oficial ou graduado."
+      },
+      {
+        "id": "B",
+        "texto": "A autoridade e a disciplina militares, princípios constitucionais basilares das instituições militares."
+      },
+      {
+        "id": "C",
+        "texto": "A integridade do erário e o patrimônio das Forças de Segurança."
+      },
+      {
+        "id": "D",
+        "texto": "A incolumidade do tráfego urbano em áreas militares."
+      }
+    ],
+    "respostaCorreta": "B",
+    "explicacao": "Os crimes contra a autoridade ou disciplina militar (arts. 149 a 166 do CPM) têm como bem jurídico mediato e principal a autoridade, a hierarquia e a disciplina militares, pilares previstos expressamente no art. 42 c/c art. 142 da Constituição Federal."
+  },
+  {
+    "id": "eap-pmmg-033",
+    "tema": "Doutrina Operacional e POP",
+    "assunto": "Técnicas de Abordagem a Veículos",
+    "enunciado": "Conforme o POP da PMMG para abordagem policial a veículos em atitude suspeita, a viatura policial deve posicionar-se taticamente em relação ao veículo abordado:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Na frente do veículo suspeito, bloqueando seu capô em ângulo de 90 graus."
+      },
+      {
+        "id": "B",
+        "texto": "Na retaguarda do veículo suspeito, a uma distância de segurança de aproximadamente 4 a 5 metros, alinhada ligeiramente à esquerda (cobrindo a linha de fuga), permitindo abrigo seguro aos militares na abertura das portas."
+      },
+      {
+        "id": "C",
+        "texto": "Colada lado a lado na porta do motorista do veículo abordado com os policiais dentro da viatura."
+      },
+      {
+        "id": "D",
+        "texto": "A mais de 50 metros de distância, aguardando que o suspeito desembarque voluntariamente sem comandos verbais."
+      }
+    ],
+    "respostaCorreta": "B",
+    "explicacao": "A técnica de abordagem a veículos da PMMG preconiza que a viatura policial deve parar à retaguarda do veículo abordado, resguardando distância de segurança (4 a 5 metros), levemente deslocada à esquerda para proporcionar ângulo visual, proteção balística do bloco do motor e segurança no desembarque dos operadores."
+  },
+  {
+    "id": "eap-pmmg-034",
+    "tema": "Legislação Extravagante",
+    "assunto": "Lei de Abuso de Autoridade - Lei nº 13.869/2019",
+    "enunciado": "Submeter o preso ou detido a interrogatório policial durante o período de repouso noturno, salvo se capturado em flagrante delito ou com seu prévio consentimento assistido por defensor (art. 18 da Lei 13.869/2019):",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Configura conduta atípica, pois a polícia tem discricionariedade absoluta para interrogar a qualquer hora."
+      },
+      {
+        "id": "B",
+        "texto": "Constitui crime de abuso de autoridade punido com pena de detenção e multa."
+      },
+      {
+        "id": "C",
+        "texto": "Gera apenas advertência administrativa do chefe imediato, sem qualquer repercussão penal."
+      },
+      {
+        "id": "D",
+        "texto": "É permitido independentemente de flagrante delito para agilizar o encerramento do REDS."
+      }
+    ],
+    "respostaCorreta": "B",
+    "explicacao": "O art. 18 da Lei nº 13.869/2019 tipifica como crime de abuso de autoridade 'Submeter o preso, internado ou apreendido a interrogatório policial durante o período de repouso noturno, salvo se capturado em flagrante delito ou se ele, devidamente assistido, consentir em prestar declarações' (detenção de 6 meses a 2 anos e multa)."
+  },
+  {
+    "id": "eap-pmmg-035",
+    "tema": "Legislação Institucional",
+    "assunto": "CEDPM - Lei Estadual nº 14.310/2002",
+    "enunciado": "Segundo o CEDPM (Lei nº 14.310/2002), sobre a Comissão Processante Disciplinar (CPD) e os Processos Administrativos Disciplinares (PAD), é garantia expressa assegurada ao militar acusado:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "O direito ao contraditório e à ampla defesa, com a oportunidade de arrolar testemunhas e apresentar defesa escrita acompanhada de advogado ou defensor dativo."
+      },
+      {
+        "id": "B",
+        "texto": "O dever de confessar a prática do ato ilícito para obter direito a recurso."
+      },
+      {
+        "id": "C",
+        "texto": "A obrigatoriedade de julgamento secreto sem acesso aos autos antes da decisão final."
+      },
+      {
+        "id": "D",
+        "texto": "A dispensa de notificação formal dos atos do processo quando se tratar de praça."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "O art. 5º, LV da Constituição e o CEDPM consagram o princípio da ampla defesa e do contraditório no processo administrativo disciplinar militar, com prazo para apresentação de defesa, arrolamento de testemunhas e assistência jurídica por advogado constituído ou defensor designado."
+  },
+  {
+    "id": "eap-pmmg-036",
+    "tema": "Direito Penal Militar",
+    "assunto": "Crimes Militares em Espécie (CPM)",
+    "enunciado": "No crime de Peculato culposo (art. 303, § 3º e § 4º do CPM), a reparação do dano patrimonial antes da sentença condenatória irrecorrível:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Aumenta a pena de metade pela confissão da culpa."
+      },
+      {
+        "id": "B",
+        "texto": "Extingue a punibilidade do agente militar."
+      },
+      {
+        "id": "C",
+        "texto": "Apenas converte a pena de reclusão em detenção simples."
+      },
+      {
+        "id": "D",
+        "texto": "Não produz qualquer efeito na esfera penal militar."
+      }
+    ],
+    "respostaCorreta": "B",
+    "explicacao": "Conforme o art. 303, § 4º do Código Penal Militar, no peculato culposo, a reparação do dano, se precede a sentença irrecorrível, extingue a punibilidade; se lhe é posterior, reduz de metade a pena imposta."
+  },
+  {
+    "id": "eap-pmmg-037",
+    "tema": "Doutrina Operacional e POP",
+    "assunto": "Uso Diferenciado da Força",
+    "enunciado": "No contínuo do uso da força adotado pela PMMG, perante uma atitude de 'Resistência Passiva' (indivíduo que não acata a ordem verbal mas não agride os policiais fisicamente, como sentar no chão e se recusar a sair), o nível de força proporcional correspondente é:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Emprego imediato de arma de fogo letal."
+      },
+      {
+        "id": "B",
+        "texto": "Técnicas de controle de contato e condução física (imobilização tática de baixa lesividade)."
+      },
+      {
+        "id": "C",
+        "texto": "Disparo de elastômero (bala de borracha) à queima-roupa na cabeça."
+      },
+      {
+        "id": "D",
+        "texto": "Retirada incontinenti da guarnição do local sem intervenção."
+      }
+    ],
+    "respostaCorreta": "B",
+    "explicacao": "Na escala progressiva de força: à presença policial responde a cooperação; à resistência passiva responde o controle de contato (técnicas de mãos livres e condução); à resistência ativa responde o controle físico/técnicas não letais de impacto moderado; à agressão letal responde a força potencialmente letal (arma de fogo)."
+  },
+  {
+    "id": "eap-pmmg-038",
+    "tema": "Legislação Extravagante",
+    "assunto": "Crimes de Trânsito no Contexto Policial (CTB)",
+    "enunciado": "Segundo o Código de Trânsito Brasileiro (CTB - Lei nº 9.503/1997), as viaturas policiais quando em serviço de urgência e devidamente identificadas por dispositivos regulamentares de alarme sonoro (sirene) e iluminação vermelha intermitente (giroflex):",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Gozam de livre circulação, estacionamento e parada, devendo os condutores agir com cautela e velocidade compatível com a segurança viária nos cruzamentos."
+      },
+      {
+        "id": "B",
+        "texto": "Têm imunidade penal absoluta em caso de colisão com vítimas fatais decorrente de excesso manifesto de velocidade."
+      },
+      {
+        "id": "C",
+        "texto": "Podem transitar em velocidade ilimitada sem necessidade de acionar giroflex e sirene."
+      },
+      {
+        "id": "D",
+        "texto": "Não possuem qualquer preferência de passagem frente aos demais veículos particulares."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "Art. 29, VII do CTB: Os veículos destinados a socorro de incêndio e salvamento, os de polícia, os de fiscalização e operação de trânsito e as ambulâncias, além de prioridade no trânsito, gozam de livre circulação, estacionamento e parada, quando em serviço de urgência, de policiamento ostensivo ou de preservação da ordem pública, observada a devida cautela."
+  },
+  {
+    "id": "eap-pmmg-039",
+    "tema": "Legislação Institucional",
+    "assunto": "EMEMG - Lei Estadual nº 5.301/1969",
+    "enunciado": "Conforme o Estatuto dos Militares (Lei nº 5.301/1969), o militar da ativa que permanecer por mais de 24 (vinte e quatro) horas consecutivas sem que se saiba o seu paradeiro e sem que haja deixado notícia de onde possa ser encontrado é considerado oficialmente:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Desaparecido."
+      },
+      {
+        "id": "B",
+        "texto": "Extraviado definitivo."
+      },
+      {
+        "id": "C",
+        "texto": "Desertor consumado."
+      },
+      {
+        "id": "D",
+        "texto": "Rebelde."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "Conforme o EMEMG (Lei 5.301/1969), é considerado desaparecido o militar da ativa que, no desempenho de qualquer serviço, em viagem, em operações policiais ou em caso de calamidade pública, tiver paradeiro ignorado por mais de 24 horas consecutivas. Se a ausência persistir por mais de trinta dias, é considerado oficialmente extraviado."
+  },
+  {
+    "id": "eap-pmmg-040",
+    "tema": "Doutrina Operacional e POP",
+    "assunto": "Comunicação Operacional e REDS",
+    "enunciado": "No registro do Registro de Eventos de Defesa Social (REDS) pela guarnição policial militar, o histórico da ocorrência policial deve atender aos seguintes atributos fundamentais da redação técnico-policial:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Subjetividade, inclusão de opiniões pessoais dos militares e omissão do rol de testemunhas."
+      },
+      {
+        "id": "B",
+        "texto": "Objetividade, clareza, precisão, veracidade cronológica dos fatos e descrição fiel das providências adotadas."
+      },
+      {
+        "id": "C",
+        "texto": "Uso obrigatório de gírias e expressões regionais coloquiais para retratar a linguagem dos infratores."
+      },
+      {
+        "id": "D",
+        "texto": "Anonimato de todos os envolvidos e ausência de qualificação dos bens apreendidos."
+      }
+    ],
+    "respostaCorreta": "B",
+    "explicacao": "O REDS (boletim de ocorrência da PMMG) é documento público com fé pública e força probatória. Seu histórico deve primar pela impessoalidade, clareza, concisão, exatidão dos horários e locais, e relato fidedigno das circunstâncias da ação e das providências de custódia e apreensão."
+  },
+  {
+    "id": "eap-pmmg-041",
+    "tema": "Legislação Institucional",
+    "assunto": "CEDPM - Lei Estadual nº 14.310/2002",
+    "enunciado": "Após ser formalmente notificado de uma Comunicação Disciplinar para prestar esclarecimentos sobre fato que em tese configura transgressão, o militar estadual dispõe de qual prazo regulamentar para apresentar suas razões escritas de defesa?",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "3 (três) dias úteis."
+      },
+      {
+        "id": "B",
+        "texto": "24 (vinte e quatro) horas corridas."
+      },
+      {
+        "id": "C",
+        "texto": "5 (cinco) dias úteis."
+      },
+      {
+        "id": "D",
+        "texto": "10 (dez) dias corridos."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "Conforme o art. 58 do CEDPM (Lei nº 14.310/2002), ao militar comunicado é assegurado o direito ao contraditório e à ampla defesa, tendo o prazo de 3 (três) dias úteis, contados da notificação oficial, para apresentar suas razões escritas de defesa perante a autoridade competente."
+  },
+  {
+    "id": "eap-pmmg-042",
+    "tema": "Legislação Institucional",
+    "assunto": "CEDPM - Lei Estadual nº 14.310/2002",
+    "enunciado": "A respeito do Conselho de Justificação e do Conselho de Disciplina no âmbito da PMMG, assinale a distinção CORRETA quanto ao público-alvo a que se destinam:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "O Conselho de Justificação destina-se a julgar Oficiais presumivelmente incapazes de permanecer na ativa, enquanto o Conselho de Disciplina destina-se a Praças com estabilidade assegurada."
+      },
+      {
+        "id": "B",
+        "texto": "O Conselho de Disciplina destina-se exclusivamente a Oficiais superiores, e o Conselho de Justificação a Praças especiais."
+      },
+      {
+        "id": "C",
+        "texto": "Ambos os conselhos destinam-se indistintamente a qualquer militar, independentemente do círculo hierárquico."
+      },
+      {
+        "id": "D",
+        "texto": "O Conselho de Justificação aplica-se apenas a militares temporários sem estabilidade."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "Na legislação militar (Leis estaduais e CEDPM), o Conselho de Justificação é o processo administrativo especial destinado a julgar a capacidade moral e profissional do Oficial para permanecer na ativa ou na reserva. Já o Conselho de Disciplina é o colegiado destinado a julgar praças com estabilidade assegurada (mais de 3 anos de efetivo serviço)."
+  },
+  {
+    "id": "eap-pmmg-043",
+    "tema": "Legislação Institucional",
+    "assunto": "CEDPM - Lei Estadual nº 14.310/2002",
+    "enunciado": "Nos termos do CEDPM, sobre a sanção disciplinar de suspensão e seus reflexos funcionais e remuneratórios:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "A suspensão consiste no afastamento temporário das funções, com perda de remuneração correspondente aos dias da sanção, não podendo exceder a trinta dias."
+      },
+      {
+        "id": "B",
+        "texto": "O militar suspenso continua recebendo sua remuneração integral normalmente sem qualquer desconto em folha."
+      },
+      {
+        "id": "C",
+        "texto": "A suspensão acarreta prisão em cela fechada de segurança máxima no batalhão."
+      },
+      {
+        "id": "D",
+        "texto": "A suspensão só pode ser aplicada a militares que estejam classificados no conceito A."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "Conforme o art. 28 do CEDPM, a suspensão consiste no afastamento temporário do militar do serviço da unidade, de suas atividades ou do cargo que ocupa, sem remuneração durante o período de cumprimento, não podendo ultrapassar o prazo de 30 (trinta) dias."
+  },
+  {
+    "id": "eap-pmmg-044",
+    "tema": "Legislação Institucional",
+    "assunto": "CEDPM - Lei Estadual nº 14.310/2002",
+    "enunciado": "Constitui circunstância que agrava a transgressão disciplinar cometida pelo militar estadual (art. 21 do CEDPM):",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "O conluio de duas ou mais pessoas e a prática do fato em presença de tropa ou de público."
+      },
+      {
+        "id": "B",
+        "texto": "A confissão espontânea e imediata da falta cometida perante o comandante."
+      },
+      {
+        "id": "C",
+        "texto": "Possuir mais de vinte anos de efetivo serviço prestado sem qualquer mácula."
+      },
+      {
+        "id": "D",
+        "texto": "A falta de prática ou inexperiência no serviço de policiamento ostensivo."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "O art. 21 do CEDPM elenca as causas agravantes da falta disciplinar, dentre elas: conluio de duas ou mais pessoas, ter sido cometida durante a execução de serviço, na presença de subordinado, em presença de tropa reunida ou em público, ou em prejuízo da dignidade da profissão militar."
+  },
+  {
+    "id": "eap-pmmg-045",
+    "tema": "Legislação Institucional",
+    "assunto": "EMEMG - Lei Estadual nº 5.301/1969",
+    "enunciado": "Conforme o Estatuto dos Militares (Lei 5.301/1969), o militar da ativa que solicitar Licença para Tratar de Interesses Particulares (LTIP):",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Deverá contar com no mínimo 5 (cinco) anos de efetivo serviço e ficará agregado, sem direito a remuneração pelo Estado durante o afastamento."
+      },
+      {
+        "id": "B",
+        "texto": "Poderá obter a licença logo após concluir o curso de formação inicial, mantendo salário integral."
+      },
+      {
+        "id": "C",
+        "texto": "Será compulsoriamente reformado por invalidez ficta."
+      },
+      {
+        "id": "D",
+        "texto": "Terá o tempo de licença computado para fins de promoção por antiguidade."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "Conforme o EMEMG (Lei 5.301/1969), a LTIP é concedida ao militar que conte com pelo menos 5 anos de efetivo serviço. Durante o período de licença particular, o militar não recebe vencimentos e passa para a situação de agregado, não computando esse tempo para antiguidade ou aposentadoria."
+  },
+  {
+    "id": "eap-pmmg-046",
+    "tema": "Legislação Institucional",
+    "assunto": "EMEMG - Lei Estadual nº 5.301/1969",
+    "enunciado": "O ato administrativo pelo qual o militar da ativa que estava na condição de agregado retorna ao respectivo quadro, preenchendo a primeira vaga que ocorrer, é denominado:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Reversão."
+      },
+      {
+        "id": "B",
+        "texto": "Reintegração judicial ficta."
+      },
+      {
+        "id": "C",
+        "texto": "Reforma proporcional."
+      },
+      {
+        "id": "D",
+        "texto": "Disponibilidade ativa."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "No EMEMG (Lei nº 5.301/1969), 'Reversão' é o ato pelo qual o militar agregado retorna ao respectivo quadro tão logo cesse o motivo que determinou a sua agregação, voltando a ocupar a escala hierárquica na primeira vaga que se abrir."
+  },
+  {
+    "id": "eap-pmmg-047",
+    "tema": "Direito Penal Militar",
+    "assunto": "Crimes Militares em Espécie (CPM)",
+    "enunciado": "Retardar ou deixar de praticar, indevidamente, ato de ofício, ou praticá-lo contra expressa disposição de lei, para satisfazer interesse ou sentimento pessoal, configura no Código Penal Militar o crime de:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Prevaricação militar (art. 319 do CPM)."
+      },
+      {
+        "id": "B",
+        "texto": "Condescendência criminosa."
+      },
+      {
+        "id": "C",
+        "texto": "Corrupção passiva própria."
+      },
+      {
+        "id": "D",
+        "texto": "Desobediência a superior."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "Art. 319 do CPM: 'Retardar ou deixar de praticar, indevidamente, ato de ofício, ou praticá-lo contra expressa disposição de lei, para satisfazer interesse ou sentimento pessoal' configura o crime militar de Prevaricação. O elemento subjetivo específico essencial é 'para satisfazer interesse ou sentimento pessoal'."
+  },
+  {
+    "id": "eap-pmmg-048",
+    "tema": "Direito Penal Militar",
+    "assunto": "Crimes Militares em Espécie (CPM)",
+    "enunciado": "O particular civil que oferece ou promete dinheiro ou vantagem indevida a policial militar em razão de sua função pública para que este deixe de autuar uma infração comete o crime de:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Corrupção ativa militar (art. 309 do CPM)."
+      },
+      {
+        "id": "B",
+        "texto": "Concussão imprópria."
+      },
+      {
+        "id": "C",
+        "texto": "Tráfico de influência castrense."
+      },
+      {
+        "id": "D",
+        "texto": "Favorecimento real."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "Conforme o art. 309 do CPM, dar, oferecer ou prometer dinheiro ou outra vantagem indevida para a prática, omissão ou retardamento de ato funcional de militar configura o crime de Corrupção Ativa."
+  },
+  {
+    "id": "eap-pmmg-049",
+    "tema": "Direito Penal Militar",
+    "assunto": "Crimes Militares em Espécie (CPM)",
+    "enunciado": "O crime de Embriaguez em serviço (art. 202 do CPM) consuma-se quando o militar:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Apresenta-se embriagado para assumir o serviço, ou embriaga-se durante a sua prestação."
+      },
+      {
+        "id": "B",
+        "texto": "Ingere bebida alcoólica exclusivamente em sua residência durante dia de folga regulamentar."
+      },
+      {
+        "id": "C",
+        "texto": "Consome medicamento homeopático com teor alcoólico residual antes de dormir."
+      },
+      {
+        "id": "D",
+        "texto": "Recusa teste de etilômetro conduzindo veículo civil fora do horário de serviço."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "Art. 202 do CPM: 'Embriagar-se o militar, quando em serviço, ou apresentar-se embriagado para prestar qualquer serviço'. Trata-se de crime de perigo abstrato que tutela a segurança do serviço militar e a integridade da tropa."
+  },
+  {
+    "id": "eap-pmmg-050",
+    "tema": "Direito Penal Militar",
+    "assunto": "Teoria Geral do Crime Militar",
+    "enunciado": "No Código Penal Militar, o militar que comete um crime sob a influência de coação física irresistível (vis absoluta):",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Não comete crime em razão da ausência total de conduta/vontade (involuntariedade), respondendo pelo fato o autor da coação."
+      },
+      {
+        "id": "B",
+        "texto": "Responde pelo crime com pena diminuída de um terço."
+      },
+      {
+        "id": "C",
+        "texto": "Responde na modalidade culposa em regime semiaberto."
+      },
+      {
+        "id": "D",
+        "texto": "Deverá ser julgado compulsoriamente por tribunal de exceção."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "A coação física irresistível (vis absoluta) elimina o próprio movimento voluntário do agente (elimina a conduta e, portanto, o fato típico). Por esse motivo, o militar coagido fisicamente não pratica crime; o coautor ou autor mediato que exerceu a força física responde pelo delito."
+  },
+  {
+    "id": "eap-pmmg-051",
+    "tema": "Direito Processual Penal Militar",
+    "assunto": "Inquérito Policial Militar (CPPM)",
+    "enunciado": "A respeito do Encarregado do Inquérito Policial Militar (IPM), a regra geral estabelecida no art. 10 do CPPM determina que:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "O encarregado do IPM deve ser Oficial de posto superior ao do indiciado, ou de mesma patente, desde que mais antigo."
+      },
+      {
+        "id": "B",
+        "texto": "Qualquer soldado de primeira classe pode presidir o IPM de um tenente-coronel."
+      },
+      {
+        "id": "C",
+        "texto": "O encarregado deve ser necessariamente um juiz de direito togado civil."
+      },
+      {
+        "id": "D",
+        "texto": "O IPM só pode ser presidido por advogado inscrito na OAB."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "O art. 10, § 1º do CPPM estabelece que a autoridade delegante designará para encarregado do IPM um oficial de posto superior ao do indiciado, quer este seja oficial da ativa, da reserva ou reformado; ou sendo do mesmo posto, mais antigo."
+  },
+  {
+    "id": "eap-pmmg-052",
+    "tema": "Direito Processual Penal Militar",
+    "assunto": "Medidas Cautelares no CPPM",
+    "enunciado": "O benefício processual penal militar previsto no art. 263 do CPPM, que consiste no confinamento do militar de conduta ilibada em recinto militar, em substituição à prisão preventiva formal, é denominado:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Menagem."
+      },
+      {
+        "id": "B",
+        "texto": "Liberdade vigiada provisória."
+      },
+      {
+        "id": "C",
+        "texto": "Prisão-albergue domiciliar."
+      },
+      {
+        "id": "D",
+        "texto": "Sursis administrativo."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "A Menagem (arts. 263 a 269 do CPPM) é uma espécie de benefício da liberdade provisória com vinculação territorial e custodial militar. Pode ser concedida no lugar da prisão preventiva aos militares com base em sua patente, graduação ou comportamento exemplar."
+  },
+  {
+    "id": "eap-pmmg-053",
+    "tema": "Doutrina Operacional e POP",
+    "assunto": "Distância de Segurança e Regra de Tueller",
+    "enunciado": "Na doutrina de tiro policial defensivo e abordagem da PMMG, a chamada 'Regra de Tueller' demonstra tecnicamente que:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Um agressor armado com faca ou arma branca a uma distância de até 6 a 7 metros consegue atingir o policial antes que este saque e efetue disparos defensivos eficazes se estiver com a arma no coldre."
+      },
+      {
+        "id": "B",
+        "texto": "Armas brancas não oferecem nenhum risco a policiais armados a menos de 2 metros."
+      },
+      {
+        "id": "C",
+        "texto": "O policial deve obrigatoriamente se desarmar ao avistar um criminoso com foice ou facão."
+      },
+      {
+        "id": "D",
+        "texto": "A aproximação física direta rápida é a melhor técnica para imobilizar lâminas cortantes."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "O estudo balístico e tático de Dennis Tueller (adotado pela PMMG) comprovou que um adulto leva em média 1,5 segundo para percorrer cerca de 6,4 metros (21 pés), tempo exato em que um policial treinado leva para perceber a agressão, sacar a arma do coldre e efetuar disparos reativos. Por isso, 7 metros é a zona crítica mínima de segurança diante de agressor com faca."
+  },
+  {
+    "id": "eap-pmmg-054",
+    "tema": "Doutrina Operacional e POP",
+    "assunto": "Abordagem Policial e Técnicas de Busca",
+    "enunciado": "Conforme o POP da PMMG, na realização da busca pessoal no indivíduo abordado, a posição tática que proporciona maior controle e estabilidade do suspeito de alta periculosidade é a posição:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Deitado de bruços no solo (decúbito ventral), braços abertos, pernas cruzadas ou afastadas e palmas das mãos voltadas para cima."
+      },
+      {
+        "id": "B",
+        "texto": "Sentado confortavelmente de frente para o militar abordador com as mãos nos bolsos."
+      },
+      {
+        "id": "C",
+        "texto": "Em pé, de braços cruzados, sem apoio contra parede ou obstáculo."
+      },
+      {
+        "id": "D",
+        "texto": "Agachado de costas para a viatura com liberdade de movimentos rápidos."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "O POP preconiza que a posição de busca pessoal com suspeito deitado no solo em decúbito ventral (barriga para baixo) neutraliza os pontos de apoio biomecânico do corpo humano, reduzindo drasticamente a capacidade de reação súbita ou agressão física contra o militar abordador."
+  },
+  {
+    "id": "eap-pmmg-055",
+    "tema": "Doutrina Operacional e POP",
+    "assunto": "Instrumentos de Menor Potencial Ofensivo (IMPO)",
+    "enunciado": "A respeito do emprego de Instrumentos de Menor Potencial Ofensivo (como spray de pimenta/OC e Dispositivo Eletrônico de Controle - Taser/Spark), assinale a afirmativa CORRETA:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Devem ser utilizados com o objetivo de conter a agressão ou resistência, minimizando o risco de morte ou lesões permanentes no indivíduo e nos policiais."
+      },
+      {
+        "id": "B",
+        "texto": "São de uso proibido nas operações ostensivas de rotina da Polícia Militar."
+      },
+      {
+        "id": "C",
+        "texto": "O spray de pimenta deve ser aplicado preferencialmente a menos de 10 centímetros dos olhos do suspeito em jato contínuo de 1 minuto."
+      },
+      {
+        "id": "D",
+        "texto": "O choque elétrico pode ser mantido indefinidamente como técnica de coerção moral investigativa."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "Os Instrumentos de Menor Potencial Ofensivo (IMPO) são recursos táticos intermediários fundamentais na doutrina da PMMG. Visam cessar condutas violentas ou resistências ativas preservando a vida e a integridade de todos, conforme a Lei Federal nº 13.060/2014 e as Diretrizes Institucionais da PMMG."
+  },
+  {
+    "id": "eap-pmmg-056",
+    "tema": "Doutrina Operacional e POP",
+    "assunto": "Gerenciamento de Crises Policiais",
+    "enunciado": "Ao se deparar com uma situação de crise com reféns (incidente crítico de segurança), a primeira guarnição policial militar que chega ao local atua como 'Primeiro Interventor', cabendo-lhe cumprir as seguintes ações imediatas essenciais:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Conter, Isolar a área, Estabilizar a situação e Acionar os recursos especializados da PMMG (como o BOPE/GATE)."
+      },
+      {
+        "id": "B",
+        "texto": "Invadir o cativeiro de imediato sem negociador e efetuar disparos múltiplos."
+      },
+      {
+        "id": "C",
+        "texto": "Conceder aos criminosos armas de maior calibre em troca da liberação parcial dos reféns."
+      },
+      {
+        "id": "D",
+        "texto": "Abandonar o perímetro tático para não constranger os sequestradores."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "Na doutrina de Gerenciamento de Crises da PMMG, os objetivos imediatos do primeiro interventor são: Contenção (não deixar a crise se expandir), Isolamento (preservação de vidas ao redor), Estabilização (acalmar os ânimos por meio da verbalização inicial, sem fazer concessões táticas) e Acionamento da autoridade e tropas de intervenção tática especializada."
+  },
+  {
+    "id": "eap-pmmg-057",
+    "tema": "Legislação Extravagante",
+    "assunto": "Lei Maria da Penha - Lei nº 11.340/2006",
+    "enunciado": "Com a alteração promovida pela Lei nº 13.827/2019 na Lei Maria da Penha, verificada a existência de risco atual ou iminente à vida ou à integridade física da mulher, o agressor poderá ser imediatamente afastado do lar pelo policial militar quando:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "O município não for sede de comarca e não houver delegado de polícia disponível no momento da denúncia."
+      },
+      {
+        "id": "B",
+        "texto": "Houver expressa determinação do comandante do batalhão sem ciência judicial."
+      },
+      {
+        "id": "C",
+        "texto": "A vítima manifestar oralmente o perdão judicial do infrator."
+      },
+      {
+        "id": "D",
+        "texto": "Em qualquer situação, mesmo havendo juiz de plantão ao lado do local da ocorrência."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "Conforme o art. 12-C da Lei nº 11.340/2006, o afastamento imediato do agressor do lar pode ser realizado: I - pela autoridade judicial; II - pelo delegado de polícia, quando o município não for sede de comarca; ou III - pelo policial (inclusive militar), quando o município não for sede de comarca e não houver delegado de polícia disponível no momento do atendimento."
+  },
+  {
+    "id": "eap-pmmg-058",
+    "tema": "Legislação Extravagante",
+    "assunto": "Lei de Crimes Hediondos - Lei nº 8.072/1990",
+    "enunciado": "O homicídio praticado contra autoridade ou agente integrante dos órgãos de segurança pública (como o Policial Militar), no exercício da função ou em decorrência dela, ou contra seu cônjuge, companheiro ou parente consanguíneo até terceiro grau em razão dessa condição:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "É qualificado (homicídio funcional) e considerado expressamente crime hediondo."
+      },
+      {
+        "id": "B",
+        "texto": "Configura crime comum culposo afiançável com perdão judicial."
+      },
+      {
+        "id": "C",
+        "texto": "Não altera o patamar de pena fixado para o homicídio simples."
+      },
+      {
+        "id": "D",
+        "texto": "Será julgado sumariamente pelo Tribunal de Justiça Militar."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "O Código Penal (art. 121, § 2º, VII) e a Lei dos Crimes Hediondos (Lei 8.072/1990) tipificam como homicídio qualificado e hediondo o delito praticado contra membros das Forças de Segurança Pública em serviço ou em razão dele (homicídio funcional), com pena de reclusão de 12 a 30 anos e regras rigorosas de cumprimento de pena."
+  },
+  {
+    "id": "eap-pmmg-059",
+    "tema": "Legislação Extravagante",
+    "assunto": "Lei de Drogas - Lei nº 11.343/2006",
+    "enunciado": "A conduta de oferecer droga, eventualmente e sem objetivo de lucro, a pessoa de seu relacionamento, para juntos a consumirem (art. 33, § 3º da Lei 11.343/2006):",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Configura figura privilegiada equiparada a infração de menor potencial ofensivo, com pena de detenção de 6 meses a 1 ano e prestação de serviços."
+      },
+      {
+        "id": "B",
+        "texto": "Equipara-se ao tráfico transnacional de entorpecentes com pena de 15 a 30 anos de reclusão."
+      },
+      {
+        "id": "C",
+        "texto": "É fato totalmente atípico no direito penal brasileiro."
+      },
+      {
+        "id": "D",
+        "texto": "Exige prisão em flagrante inafiançável com julgamento exclusivo pela Justiça Federal."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "O art. 33, § 3º da Lei de Drogas tipifica o chamado 'uso compartilhado de drogas' (oferecer droga, eventualmente e sem intuito de lucro, a pessoa do seu relacionamento para consumo conjunto). É infração de menor potencial ofensivo (detenção de 6 meses a 1 ano), não se confundindo com o tráfico clássico de drogas."
+  },
+  {
+    "id": "eap-pmmg-060",
+    "tema": "Legislação Extravagante",
+    "assunto": "Lei de Abuso de Autoridade - Lei nº 13.869/2019",
+    "enunciado": "Constranger o preso ou detido, mediante violência, grave ameaça ou redução de sua capacidade de resistência, a submeter-se a situação vexatória ou a constrangimento não autorizado em lei (art. 13 da Lei 13.869/2019):",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Configura crime de abuso de autoridade punido com detenção de 1 a 4 anos e multa, sem prejuízo da pena cominada à violência."
+      },
+      {
+        "id": "B",
+        "texto": "É prática legal inerente à publicidade dos atos das corporações militares."
+      },
+      {
+        "id": "C",
+        "texto": "Gera responsabilidade exclusiva do repórter cinematográfico presente."
+      },
+      {
+        "id": "D",
+        "texto": "Não se aplica aos policiais militares de serviço ostensivo."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "O art. 13 da Lei nº 13.869/2019 criminaliza expressamente a conduta de constranger o preso a exibir-se à curiosidade pública, submeter-se a situação vexatória ou produzir prova contra si mesmo, com pena de detenção de 1 a 4 anos, multa e cumulação com penas corporais se houver lesão física."
+  },
+  {
+    "id": "eap-pmmg-061",
+    "tema": "Legislação Institucional",
+    "assunto": "CEDPM - Lei Estadual nº 14.310/2002",
+    "enunciado": "A respeito das recompensas militares previstas no CEDPM (Lei nº 14.310/2002), constituem formas legítimas de reconhecimento pelo bom desempenho do militar:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Elogio individual ou coletivo, dispensa do serviço e cancelamento de sanções disciplinares."
+      },
+      {
+        "id": "B",
+        "texto": "Concessão discricionária de porte de armas de uso exclusivo das forças armadas sem registro."
+      },
+      {
+        "id": "C",
+        "texto": "Aumento salarial compulsório concedido diretamente pelo capitão da companhia."
+      },
+      {
+        "id": "D",
+        "texto": "Imunidade absoluta a qualquer processo disciplinar futuro."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "Conforme os arts. 77 a 80 do CEDPM, são recompensas militares conferidas aos integrantes das corporações militares de Minas Gerais: o elogio, a dispensa de serviço, o cancelamento de registros de sanções disciplinares e outras honrarias e condecorações legalmente instituídas."
+  },
+  {
+    "id": "eap-pmmg-062",
+    "tema": "Legislação Institucional",
+    "assunto": "EMEMG - Lei Estadual nº 5.301/1969",
+    "enunciado": "Segundo o Estatuto dos Militares (Lei 5.301/1969), o militar da ativa que contrair matrimônio terá direito a afastamento total do serviço (licença nupcial) pelo período de:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "8 (oito) dias consecutivos."
+      },
+      {
+        "id": "B",
+        "texto": "2 (dois) dias úteis."
+      },
+      {
+        "id": "C",
+        "texto": "15 (quinze) dias corridos."
+      },
+      {
+        "id": "D",
+        "texto": "30 (trinta) dias com prejuízo dos vencimentos."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "O Estatuto dos Militares do Estado de Minas Gerais assegura ao militar o direito de afastar-se do serviço por 8 (oito) dias consecutivos em razão de núpcias (casamento), assim como por 8 dias em caso de luto (falecimento de cônjuge, pais, filhos ou irmãos)."
+  },
+  {
+    "id": "eap-pmmg-063",
+    "tema": "Direito Penal Militar",
+    "assunto": "Crimes Militares em Espécie (CPM)",
+    "enunciado": "O crime militar de Falsidade Ideológica (art. 312 do CPM) consuma-se quando o agente:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Omitir, em documento público ou particular militar, declaração que dele devia constar, ou nele inserir ou fazer inserir declaração falsa ou diversa da que devia ser escrita, com o fim de prejudicar direito ou criar obrigação."
+      },
+      {
+        "id": "B",
+        "texto": "Rabiscar ou amassar involuntariamente cópia de documento sem fé pública."
+      },
+      {
+        "id": "C",
+        "texto": "Falsificar a assinatura material em papel moeda corrente internacional."
+      },
+      {
+        "id": "D",
+        "texto": "Extraviar documento militar por mera negligência durante o patrulhamento."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "Art. 312 do CPM: 'Omitir, em documento público ou particular, declaração que dele devia constar, ou nele inserir ou fazer inserir declaração falsa ou diversa da que devia ser escrita, com o fim de prejudicar direito, criar obrigação ou alterar a verdade sobre fato juridicamente relevante'."
+  },
+  {
+    "id": "eap-pmmg-064",
+    "tema": "Direito Penal Militar",
+    "assunto": "Crimes Militares em Espécie (CPM)",
+    "enunciado": "Desrespeitar superior diante de outro militar (art. 160 do CPM) e Desacato a militar no exercício da função (art. 299 do CPM) distinguem-se porque:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "O crime do art. 160 tutela a hierarquia militar e exige que o ofendido seja superior hierárquico e que haja presença de outro militar; enquanto o art. 299 tutela o prestígio da autoridade militar em geral, mesmo entre iguais ou contra inferior em serviço."
+      },
+      {
+        "id": "B",
+        "texto": "Ambos exigem que o agente seja oficial superior reformado."
+      },
+      {
+        "id": "C",
+        "texto": "O desacato só ocorre em tempo de guerra externa."
+      },
+      {
+        "id": "D",
+        "texto": "O desrespeito a superior é punido apenas com repreensão administrativa."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "O crime de desrespeito a superior (art. 160) exige a presença de outro militar e qualidade de superior da vítima. O desacato a militar (art. 299) consiste em desacatar militar no exercício de função ou em razão dela, podendo o sujeito passivo ser superior, igual ou subordinado que esteja atuando no estrito exercício funcional."
+  },
+  {
+    "id": "eap-pmmg-065",
+    "tema": "Direito Processual Penal Militar",
+    "assunto": "Prisão em Flagrante Delito (CPPM)",
+    "enunciado": "Nos termos do Código de Processo Penal Militar (CPPM), quando um militar estadual cometer crime militar e for capturado em flagrante:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Deverá ser lavrado o Auto de Prisão em Flagrante Delito (APFD) por autoridade de polícia judiciária militar competente, sendo o preso recolhido a unidade prisional militar."
+      },
+      {
+        "id": "B",
+        "texto": "Deverá ser conduzido à carceragem de presos comuns da penitenciária civil."
+      },
+      {
+        "id": "C",
+        "texto": "Ficará dispensado de qualquer lavratura caso possua mais de 10 anos de serviço."
+      },
+      {
+        "id": "D",
+        "texto": "O flagrante só pode ser lavrado se houver confissão por escritura pública."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "Nos termos do art. 243 e seguintes do CPPM e da Constituição (art. 125, § 4º), os militares dos Estados têm prerrogativa de prisão em recinto de unidade militar de sua própria corporação, sendo o auto de prisão em flagrante por crime militar lavrado pela autoridade militar competente."
+  },
+  {
+    "id": "eap-pmmg-066",
+    "tema": "Doutrina Operacional e POP",
+    "assunto": "Triângulo de Segurança e Ponto Base",
+    "enunciado": "No posicionamento dos militares de uma guarnição durante a permanência em Ponto Base (PB) ou blitz de trânsito, a regra tática fundamental de sobrevivência policial consiste em:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Adotar o Triângulo de Segurança (visão de 360 graus mútua), mantendo os militares distribuídos de forma a cobrir as costas e pontos cegos uns dos outros."
+      },
+      {
+        "id": "B",
+        "texto": "Permanecerem todos agrupados de costas para o tráfego olhando para a mesma tela de celular."
+      },
+      {
+        "id": "C",
+        "texto": "Ficarem os militares sentados no interior da viatura com vidros fechados sem visual do entorno."
+      },
+      {
+        "id": "D",
+        "texto": "Ficar apenas um militar em pé enquanto os demais dormem na retaguarda."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "O Triângulo de Segurança na doutrina da PMMG garante que a equipe mantenha cobertura de 360 graus, impedindo a aproximação furtiva de ameaças e assegurando que um policial sempre proteja a retaguarda do companheiro."
+  },
+  {
+    "id": "eap-pmmg-067",
+    "tema": "Doutrina Operacional e POP",
+    "assunto": "Abordagem a Coletivos de Transporte",
+    "enunciado": "Na abordagem policial a ônibus coletivo urbano em atitude suspeita (segundo o POP da PMMG):",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "A guarnição deve estabelecer verbalização clara, determinar que os passageiros mantenham as mãos visíveis sobre os bancos ou encostos e realizar a inspeção visual preliminar antes de desembarques precipitados."
+      },
+      {
+        "id": "B",
+        "texto": "Os policiais devem ingressar atirando no teto do veículo para assustar possíveis assaltantes."
+      },
+      {
+        "id": "C",
+        "texto": "Deve-se mandar todos os passageiros correrem juntos em direção à porta traseira."
+      },
+      {
+        "id": "D",
+        "texto": "A viatura policial deve empurrar o ônibus para fora da pista."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "O Procedimento Operacional Padrão da PMMG determina que em coletivos a equipe priorize a verbalização firme e serena, controle das mãos de todos os passageiros para evitar disparos no ambiente confinado, mantendo cobertura externa na porta dianteira e traseira."
+  },
+  {
+    "id": "eap-pmmg-068",
+    "tema": "Doutrina Operacional e POP",
+    "assunto": "Cadeia de Custódia e Lacre de Vestígios",
+    "enunciado": "De acordo com as regras da Cadeia de Custódia (art. 158-A do CPP) adotadas pela PMMG, todo vestígio recolhido em local de crime (como armas, drogas ou cápsulas):",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Deve ser acondicionado em embalagem individual apropriada, devidamente lacrada, numerada e identificada, não podendo ser violada senão pelo perito oficial."
+      },
+      {
+        "id": "B",
+        "texto": "Pode ser misturado em sacolas de supermercado sem identificação dos policiais."
+      },
+      {
+        "id": "C",
+        "texto": "Pode ser manuseado e testado por curiosos antes da chegada à delegacia."
+      },
+      {
+        "id": "D",
+        "texto": "Dispensa formalidades caso se trate de objeto de baixo valor monetário."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "A cadeia de custódia (Lei nº 13.964/2019 e instruções da PMMG) é o conjunto de procedimentos utilizados para manter e documentar a história cronológica do vestígio, exigindo lacre individual numerado para assegurar a autenticidade e validade jurídica da prova."
+  },
+  {
+    "id": "eap-pmmg-069",
+    "tema": "Legislação Extravagante",
+    "assunto": "Estatuto da Pessoa Idosa - Lei nº 10.741/2003",
+    "enunciado": "A conduta de apropriar-se de ou desviar bens, proventos, pensão ou qualquer outro rendimento de pessoa idosa, dando-lhes aplicação diversa da de sua finalidade (art. 102 do Estatuto do Idoso):",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Constitui crime punido com pena de reclusão de 1 a 4 anos e multa."
+      },
+      {
+        "id": "B",
+        "texto": "Configura mera discordância civil sem repercussão na esfera penal."
+      },
+      {
+        "id": "C",
+        "texto": "É infração punida apenas se houver lesão corporal grave associada."
+      },
+      {
+        "id": "D",
+        "texto": "Fica isenta de pena se o agente for filho do idoso, por imunidade absoluta da lei civil."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "O art. 102 da Lei nº 10.741/2003 tipifica o crime de apropriação indébita ou desvio de bens de pessoa idosa com reclusão de 1 a 4 anos e multa. Importante: nos crimes contra idosos não se aplicam as imunidades patrimoniais dos arts. 181 e 182 do Código Penal."
+  },
+  {
+    "id": "eap-pmmg-070",
+    "tema": "Legislação Extravagante",
+    "assunto": "Lei de Abuso de Autoridade - Lei nº 13.869/2019",
+    "enunciado": "Nos termos do art. 22 da Lei nº 13.869/2019, invadir ou adentrar, clandestina ou astuciosamente, ou à revelia da vontade do ocupante, imóvel alheio ou suas dependências, sem determinação judicial ou fora das condições estabelecidas em lei:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Constitui crime de abuso de autoridade punido com pena de detenção de 1 a 4 anos e multa."
+      },
+      {
+        "id": "B",
+        "texto": "É lícito a qualquer hora do dia ou da noite independentemente de flagrante delito."
+      },
+      {
+        "id": "C",
+        "texto": "Constitui infração de trânsito punida com remoção da viatura."
+      },
+      {
+        "id": "D",
+        "texto": "Não se aplica a policiais fardados em patrulhamento de bairro."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "O art. 22 da Lei nº 13.869/2019 tipifica a invasão de domicílio sem as causas constitucionais autorizadoras (flagrante delito, desastre, socorro ou consentimento do morador) com pena de detenção de 1 a 4 anos e multa."
+  },
+  {
+    "id": "eap-pmmg-071",
+    "tema": "Legislação Institucional",
+    "assunto": "CEDPM - Lei Estadual nº 14.310/2002",
+    "enunciado": "A respeito do Conselho de Ética e Disciplina Militares da Unidade (CEDM) previsto no CEDPM, assinale a opção CORRETA sobre sua composição e atribuições:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "É órgão colegiado de natureza consultiva encarregado de emitir parecer sobre a conduta disciplinar e mérito de militares submetidos a processos disciplinares na Unidade."
+      },
+      {
+        "id": "B",
+        "texto": "Tem competência exclusiva para decretar a prisão preventiva de coronéis da corporação."
+      },
+      {
+        "id": "C",
+        "texto": "É formado exclusivamente por cidadãos civis sem ligação com a PMMG."
+      },
+      {
+        "id": "D",
+        "texto": "Seus pareceres têm força de lei em todo o território nacional."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "Conforme o CEDPM, o CEDM (Conselho de Ética e Disciplina Militares) instituído em cada Unidade é um órgão colegiado de caráter consultivo, cuja atribuição é assessorar o Comandante nos julgamentos disciplinares e na avaliação de conduta e conceitos éticos."
+  },
+  {
+    "id": "eap-pmmg-072",
+    "tema": "Legislação Institucional",
+    "assunto": "EMEMG - Lei Estadual nº 5.301/1969",
+    "enunciado": "Conforme o EMEMG (Lei 5.301/1969), o militar da ativa que vier a falecer em consequência de ato de bravura ou em cumprimento do dever policial militar será promovido:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Post-mortem, ao posto ou graduação imediatamente superior."
+      },
+      {
+        "id": "B",
+        "texto": "Por antiguidade tardia sem qualquer reflexo pecuniário para os herdeiros."
+      },
+      {
+        "id": "C",
+        "texto": "Ex-officio honorífico sem aposentadoria."
+      },
+      {
+        "id": "D",
+        "texto": "Apenas se tiver concluído o curso de formação de oficiais."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "A promoção post-mortem é concedida pela corporação ao militar que falecer no cumprimento do dever ou em consequência de ferimento recebido em serviço, ou que tenha sido julgado apto para promoção anterior ao falecimento, garantindo pensão proporcional aos seus dependentes."
+  },
+  {
+    "id": "eap-pmmg-073",
+    "tema": "Direito Penal Militar",
+    "assunto": "Crimes Militares em Espécie (CPM)",
+    "enunciado": "O crime de Deserção no CPM (art. 187) possui como particularidade processual:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "A possibilidade de captura e prisão do desertor por qualquer pessoa, sem necessidade de mandado judicial formal prévio, por se tratar de crime propriamente militar permanente."
+      },
+      {
+        "id": "B",
+        "texto": "A exigência de autorização do Senado Federal para detenção do militar faltoso."
+      },
+      {
+        "id": "C",
+        "texto": "A imprescritibilidade absoluta mesmo após os 70 anos de idade do agente."
+      },
+      {
+        "id": "D",
+        "texto": "A necessidade de homologação pelo Ministério Público antes de lavrar o termo de ausência."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "Conforme o Código de Processo Penal Militar (art. 243, § 1º) e a jurisprudência consolidada, o desertor pode ser preso por qualquer autoridade ou cidadão onde quer que seja encontrado, independentemente de prévia ordem judicial escrita, tendo em vista a natureza permanente e grave do crime contra o dever militar."
+  },
+  {
+    "id": "eap-pmmg-074",
+    "tema": "Doutrina Operacional e POP",
+    "assunto": "Abordagem a Motocicletas Suspeitas",
+    "enunciado": "Ao realizar abordagem a uma motocicleta ocupada por dois indivíduos em atitude suspeita, a guarnição policial deve redobrar a atenção prioritariamente em relação:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Ao passageiro (garupa), pois este possui as mãos livres, maior campo de tiro e maior facilidade para sacar armas contra os militares."
+      },
+      {
+        "id": "B",
+        "texto": "Exclusivamente ao escapamento da motocicleta."
+      },
+      {
+        "id": "C",
+        "texto": "Ao capacete apenas para verificar a validade do selo do Inmetro."
+      },
+      {
+        "id": "D",
+        "texto": "À placa do veículo ignorando os gestos dos ocupantes."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "O POP da PMMG adverte que em abordagens a motocicletas com dois ocupantes, o garupa representa a ameaça mais letal imediata, pois não está ocupado com os comandos de condução da moto (guidão, embreagem e freio), podendo reagir armadamente em frações de segundo."
+  },
+  {
+    "id": "eap-pmmg-075",
+    "tema": "Legislação Extravagante",
+    "assunto": "Lei de Tortura - Lei nº 9.455/1997",
+    "enunciado": "Aquele que se omite em face das condutas de tortura, quando tinha o dever de evitá-las ou apurá-las (art. 1º, § 2º da Lei 9.455/1997):",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Incorre na pena de detenção de 1 a 4 anos (tortura por omissão)."
+      },
+      {
+        "id": "B",
+        "texto": "Responde na mesma pena privativa de liberdade dos autores imediatos (reclusão de 4 a 10 anos)."
+      },
+      {
+        "id": "C",
+        "texto": "Pratica conduta atípica, pois a omissão nunca é punida no direito brasileiro."
+      },
+      {
+        "id": "D",
+        "texto": "Recebe apenas repreensão ética da Corregedoria."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "A chamada 'tortura por omissão' (art. 1º, § 2º da Lei nº 9.455/1997) pune aquele que se omite em face da tortura quando tinha o dever jurídico de evitá-la ou apurá-la com pena de detenção de 1 a 4 anos (pena mais branda que a da tortura ativa, mas com efeitos disciplinares severos para superiores e corregedores)."
+  },
+  {
+    "id": "eap-pmmg-076",
+    "tema": "Legislação Institucional",
+    "assunto": "CEDPM - Lei Estadual nº 14.310/2002",
+    "enunciado": "No CEDPM, cometer transgressão disciplinar para a qual não haja justificativa plausível, estando o militar sob o efeito de bebida alcoólica ou substância entorpecente:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Constitui circunstância que agrava a sanção disciplinar a ser imposta."
+      },
+      {
+        "id": "B",
+        "texto": "Constitui causa de justificação automática que extingue a punibilidade."
+      },
+      {
+        "id": "C",
+        "texto": "Impede a instauração de qualquer processo disciplinar pelo prazo de 6 meses."
+      },
+      {
+        "id": "D",
+        "texto": "Converte a sanção em elogio meritório."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "Conforme o art. 21 do CEDPM, estar sob a influência de álcool ou de substância entorpecente ao cometer a infração disciplinar é circunstância expressamente agravante, demonstrando quebra do dever de sobriedade inerente à carreira militar."
+  },
+  {
+    "id": "eap-pmmg-077",
+    "tema": "Direito Penal Militar",
+    "assunto": "Crimes Militares em Espécie (CPM)",
+    "enunciado": "Subtrair, ou concorrer para que seja subtraído, em proveito próprio ou alheio, coisa móvel da administração militar, valendo-se da facilidade que lhe proporciona a qualidade de militar, configura:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Peculato-furto (art. 303, § 2º do CPM)."
+      },
+      {
+        "id": "B",
+        "texto": "Roubo militar qualificado."
+      },
+      {
+        "id": "C",
+        "texto": "Apropriação de coisa havida por erro."
+      },
+      {
+        "id": "D",
+        "texto": "Estelionato administrativo simples."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "Art. 303, § 2º do CPM: Aplica-se a pena do peculato ao militar que, embora não tendo a posse ou detenção da coisa móvel, a subtrai, ou concorre para que seja subtraída, em proveito próprio ou alheio, valendo-se da facilidade que lhe proporciona a qualidade de militar (Peculato-Furto)."
+  },
+  {
+    "id": "eap-pmmg-078",
+    "tema": "Doutrina Operacional e POP",
+    "assunto": "Emprego de Armas e Munições de Impacto Controlado",
+    "enunciado": "O disparo de munições de elastômero (bala de borracha) em operações de controle de distúrbios civis pela PMMG:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Deve ser direcionado preferencialmente para membros inferiores (pernas) e áreas de grande massa muscular, sendo terminantemente proibido o disparo direcionado à cabeça ou pescoço dos manifestantes."
+      },
+      {
+        "id": "B",
+        "texto": "Deve ser efetuado à queima-roupa nos olhos dos infratores para dispersão imediata."
+      },
+      {
+        "id": "C",
+        "texto": "Só pode ser disparado por ordens expressas do Governador do Estado."
+      },
+      {
+        "id": "D",
+        "texto": "Equipara-se ao emprego de armamento nuclear tático."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "As diretrizes operacionais de Instrumentos de Menor Potencial Ofensivo da PMMG determinam que as munições de impacto controlado sejam disparadas respeitando a distância mínima de segurança e apontadas exclusivamente para os membros inferiores, visando incapacitar temporariamente sem gerar letalidade."
+  },
+  {
+    "id": "eap-pmmg-079",
+    "tema": "Legislação Extravagante",
+    "assunto": "Código de Trânsito Brasileiro - Lei nº 9.503/1997",
+    "enunciado": "Conduzir veículo automotor com capacidade psicomotora alterada em razão da influência de álcool ou de outra substância psicoativa (art. 306 do CTB):",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "Constitui crime de trânsito punido com detenção de 6 meses a 3 anos, multa e suspensão do direito de dirigir, podendo a alteração ser constatada por etilômetro, exame clínico, testemunhos ou vídeos."
+      },
+      {
+        "id": "B",
+        "texto": "É infração meramente administrativa que não admite prisão em flagrante."
+      },
+      {
+        "id": "C",
+        "texto": "Só é crime se o motorista causar capotamento com mortes confirmadas."
+      },
+      {
+        "id": "D",
+        "texto": "Não se aplica aos motoristas profissionais de transporte coletivo."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "Art. 306 do CTB: Crime de embriaguez ao volante, com pena de detenção de 6 meses a 3 anos, multa e suspensão ou proibição da habilitação. A alteração psicomotora pode ser demonstrada por concentração de álcool por etilômetro ou pelos sinais visíveis de alteração (anexo II do CTB e Resolução do CONTRAN)."
+  },
+  {
+    "id": "eap-pmmg-080",
+    "tema": "Doutrina Operacional e POP",
+    "assunto": "Diretrizes de Segurança Orgânica nas Instalações",
+    "enunciado": "A respeito da segurança orgânica das instalações policiais militares (aquartelamentos e frações), o militar que se encontra no posto de Sentinela da Guarda:",
+    "opcoes": [
+      {
+        "id": "A",
+        "texto": "É o responsável pela segurança armada do perímetro e controle de acesso, devendo manter vigilância ininterrupta e postura de pronto emprego operacional."
+      },
+      {
+        "id": "B",
+        "texto": "Pode ausentar-se do posto a qualquer momento sem permissão do Comandante da Guarda."
+      },
+      {
+        "id": "C",
+        "texto": "Deve entregar seu fuzil a qualquer civil que pedir para manuseá-lo na portaria."
+      },
+      {
+        "id": "D",
+        "texto": "Está dispensado de usar colete balístico e equipamento de proteção individual."
+      }
+    ],
+    "respostaCorreta": "A",
+    "explicacao": "A sentinela em posto militar é a autoridade máxima imediata na guarda de seu posto. Deve permanecer em constante estado de alerta, de posse de seu armamento regulamentar e com postura tática para repelir atentados e controlar o fluxo de pessoas e viaturas no aquartelamento."
   }
 ]
