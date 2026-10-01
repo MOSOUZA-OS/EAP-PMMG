@@ -807,9 +807,38 @@
       });
     }
 
+    // Forçar Atualização / Limpar Cache
+    const btnForceUpdate = document.getElementById('btnForceUpdate');
+    if (btnForceUpdate) {
+      btnForceUpdate.addEventListener('click', async () => {
+        btnForceUpdate.textContent = 'Atualizando...';
+        try {
+          if ('caches' in window) {
+            const keys = await caches.keys();
+            await Promise.all(keys.map(k => caches.delete(k)));
+          }
+          if ('serviceWorker' in navigator) {
+            const regs = await navigator.serviceWorker.getRegistrations();
+            for (const reg of regs) {
+              await reg.unregister();
+            }
+          }
+        } catch (e) {
+          console.error('Erro ao limpar cache:', e);
+        }
+        window.location.reload(true);
+      });
+    }
+
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./sw.js').catch(err => {
+      navigator.serviceWorker.register('./sw.js?v=3.1').then(reg => {
+        reg.update();
+      }).catch(err => {
         console.log('Falha ao registrar Service Worker:', err);
+      });
+
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
+        window.location.reload();
       });
     }
   }
