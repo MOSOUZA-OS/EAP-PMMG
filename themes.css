@@ -1,0 +1,350 @@
+/* ==========================================================================
+   EAP PMMG - Identidade Visual (tipografia + sistema de temas)
+   --------------------------------------------------------------------------
+   1. TIPOGRAFIA  -> padrao institucional Rawline
+   2. CORES       -> todas as cores do aplicativo sao resolvidas por variaveis
+                      CSS (canais RGB). A paleta do Tailwind (index.html)
+                      aponta para estas variaveis, entao trocar o atributo
+                      data-theme no <html> retematiza o app inteiro na hora,
+                      sem recarregar e sem regenerar o CSS.
+
+   Como alterar as cores: edite apenas o bloco do tema desejado abaixo.
+   Formato do valor: "R G B" (canais de 0 a 255, separados por espaco).
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. TIPOGRAFIA INSTITUCIONAL - RAWLINE
+   As fontes sao referenciadas apenas por local(), ou seja, o navegador usa a
+   Rawline ja instalada no sistema e NENHUM arquivo de fonte e redistribuido
+   junto do aplicativo. Sem a fonte instalada, entra o fallback da pilha.
+   Pesos 100 (Thin) a 900 (Black) + italicos.
+   -------------------------------------------------------------------------- */
+@font-face { font-family: 'Rawline'; font-style: normal; font-weight: 100; font-display: swap; src: local('Rawline-Thin'), local('Rawline Thin Regular'); }
+@font-face { font-family: 'Rawline'; font-style: italic; font-weight: 100; font-display: swap; src: local('Rawline-ThinItalic'), local('Rawline Thin Italic'); }
+@font-face { font-family: 'Rawline'; font-style: normal; font-weight: 200; font-display: swap; src: local('Rawline-ExtraLight'), local('Rawline ExtraLight Regular'); }
+@font-face { font-family: 'Rawline'; font-style: italic; font-weight: 200; font-display: swap; src: local('Rawline-ExtraLightItalic'), local('Rawline ExtraLight Italic'); }
+@font-face { font-family: 'Rawline'; font-style: normal; font-weight: 300; font-display: swap; src: local('Rawline-Light'), local('Rawline Light'); }
+@font-face { font-family: 'Rawline'; font-style: italic; font-weight: 300; font-display: swap; src: local('Rawline-LightItalic'), local('Rawline Light Italic'); }
+@font-face { font-family: 'Rawline'; font-style: normal; font-weight: 400; font-display: swap; src: local('Rawline-Regular'), local('Rawline Regular'); }
+@font-face { font-family: 'Rawline'; font-style: italic; font-weight: 400; font-display: swap; src: local('Rawline-Italic'), local('Rawline Italic'); }
+@font-face { font-family: 'Rawline'; font-style: normal; font-weight: 500; font-display: swap; src: local('Rawline-Medium'), local('Rawline Medium Regular'); }
+@font-face { font-family: 'Rawline'; font-style: italic; font-weight: 500; font-display: swap; src: local('Rawline-MediumItalic'), local('Rawline Medium Italic'); }
+@font-face { font-family: 'Rawline'; font-style: normal; font-weight: 600; font-display: swap; src: local('Rawline-SemiBold'), local('Rawline SemiBold Regular'); }
+@font-face { font-family: 'Rawline'; font-style: italic; font-weight: 600; font-display: swap; src: local('Rawline-SemiBoldItalic'), local('Rawline SemiBold Italic'); }
+@font-face { font-family: 'Rawline'; font-style: normal; font-weight: 700; font-display: swap; src: local('Rawline-Bold'), local('Rawline Bold'); }
+@font-face { font-family: 'Rawline'; font-style: italic; font-weight: 700; font-display: swap; src: local('Rawline-BoldItalic'), local('Rawline Bold Italic'); }
+@font-face { font-family: 'Rawline'; font-style: normal; font-weight: 800; font-display: swap; src: local('Rawline-ExtraBold'), local('Rawline ExtraBold Regular'); }
+@font-face { font-family: 'Rawline'; font-style: italic; font-weight: 800; font-display: swap; src: local('Rawline-ExtraBoldItalic'), local('Rawline ExtraBold Italic'); }
+@font-face { font-family: 'Rawline'; font-style: normal; font-weight: 900; font-display: swap; src: local('Rawline-Black'), local('Rawline Black Regular'); }
+@font-face { font-family: 'Rawline'; font-style: italic; font-weight: 900; font-display: swap; src: local('Rawline-BlackItalic'), local('Rawline Black Italic'); }
+
+:root {
+  --fonte-institucional: 'Rawline', 'Segoe UI', 'Helvetica Neue', Arial, system-ui, sans-serif;
+}
+
+/* Especificidade (0,1,1) para vencer a utilitaria .font-sans do Tailwind (0,1,0).
+   O corpo recebe font-sans no index.html. */
+body.font-sans {
+  font-family: var(--fonte-institucional);
+  font-feature-settings: 'ss01' 1;
+}
+
+/* O monograma EAP e o titulo usam o peso Black da Rawline */
+.logo-sigla {
+  font-family: var(--fonte-institucional);
+  font-weight: 900;
+  letter-spacing: 0.01em;
+}
+
+/* --------------------------------------------------------------------------
+   TEMA 1 - ESCURO (Padrao / original)
+   Grafite (slate) com destaque dourado. Mantem a identidade anterior.
+   -------------------------------------------------------------------------- */
+html[data-theme="escuro"] {
+  --theme-color: #0f172a;
+
+  --slate-50: 248 250 252;
+  --slate-100: 241 245 249;
+  --slate-200: 226 232 240;
+  --slate-300: 203 213 225;
+  --slate-400: 148 163 184;
+  --slate-500: 100 116 139;
+  --slate-600: 71 85 105;
+  --slate-700: 51 65 85;
+  --slate-800: 30 41 59;
+  --slate-900: 15 23 42;
+  --slate-950: 2 6 23;
+
+  --amber-50: 255 251 235;
+  --amber-100: 254 243 199;
+  --amber-200: 253 230 138;
+  --amber-300: 252 211 77;
+  --amber-400: 251 191 36;
+  --amber-500: 245 158 11;
+  --amber-600: 217 119 6;
+  --amber-700: 180 83 9;
+  --amber-800: 146 64 14;
+  --amber-900: 120 53 15;
+  --amber-950: 69 26 3;
+
+  --emerald-50: 236 253 245;
+  --emerald-100: 209 250 229;
+  --emerald-200: 167 243 208;
+  --emerald-300: 110 231 183;
+  --emerald-400: 52 211 153;
+  --emerald-500: 16 185 129;
+  --emerald-600: 5 150 105;
+  --emerald-700: 4 120 87;
+  --emerald-800: 6 95 70;
+  --emerald-900: 6 78 59;
+  --emerald-950: 2 44 34;
+
+  --rose-50: 255 241 242;
+  --rose-100: 255 228 230;
+  --rose-200: 254 205 211;
+  --rose-300: 253 164 175;
+  --rose-400: 251 113 133;
+  --rose-500: 244 63 94;
+  --rose-600: 225 29 72;
+  --rose-700: 190 18 60;
+  --rose-800: 159 18 57;
+  --rose-900: 136 19 55;
+  --rose-950: 76 5 25;
+
+  --purple-50: 250 245 255;
+  --purple-100: 243 232 255;
+  --purple-200: 233 213 255;
+  --purple-300: 216 180 254;
+  --purple-400: 192 132 252;
+  --purple-500: 168 85 247;
+  --purple-600: 147 51 234;
+  --purple-700: 126 34 206;
+  --purple-800: 107 33 168;
+  --purple-900: 76 29 149;
+  --purple-950: 46 16 101;
+
+  --c-white: 255 255 255;
+  --c-black: 0 0 0;
+}
+
+/* --------------------------------------------------------------------------
+   TEMA 2 - INSTITUCIONAL PMMG
+   Cores oficiais da identidade visual da Policia Militar de Minas Gerais:
+     Caki Tiradentes    -> destaque, acoes e monograma (#A08F63 / PMS 4515 C)
+     Preto Institucional -> superficies e cartoes          (#373435 / PMS BLACK)
+   O neutro das superficies e uma rampa carvao ancorada no Preto Institucional.
+   Uma barra caki fecha o cabecalho, no lugar da antiga faixa heraldica.
+   -------------------------------------------------------------------------- */
+html[data-theme="institucional"] {
+  --theme-color: #373435;
+
+  /* Cores institucionais (tambem usadas na barra e no logo) */
+  --institucional-caki: 160 143 99;  /* #A08F63 Caki Tiradentes */
+  --institucional-preto: 55 52 53;  /* #373435 Preto Institucional */
+
+  /* Superficies: neutro carvao */
+  --slate-50: 247 245 244;
+  --slate-100: 237 233 230;
+  --slate-200: 214 208 203;
+  --slate-300: 189 182 176;
+  --slate-400: 173 168 162;
+  --slate-500: 156 151 145;
+  --slate-600: 108 104 100;
+  --slate-700: 80 77 79;
+  --slate-800: 68 65 67;
+  --slate-900: 55 52 53;   /* Preto Institucional = cartao */
+  --slate-950: 28 27 28;   /* fundo da pagina */
+
+  /* Destaque: Caki Tiradentes */
+  --amber-50: 247 244 237;
+  --amber-100: 239 233 220;
+  --amber-200: 222 211 186;
+  --amber-300: 203 183 141;
+  --amber-400: 184 162 115;
+  --amber-500: 160 143 99;  /* Caki Tiradentes */
+  --amber-600: 139 123 83;
+  --amber-700: 117 102 69;
+  --amber-800: 92 78 53;
+  --amber-900: 62 52 34;
+  --amber-950: 36 29 17;
+
+  /* Semanticas: mantem a leitura correta / incorreta / reforco */
+  --emerald-50: 236 253 245;
+  --emerald-100: 209 250 229;
+  --emerald-200: 167 243 208;
+  --emerald-300: 110 231 183;
+  --emerald-400: 52 211 153;
+  --emerald-500: 16 185 129;
+  --emerald-600: 5 150 105;
+  --emerald-700: 4 120 87;
+  --emerald-800: 6 95 70;
+  --emerald-900: 6 78 59;
+  --emerald-950: 2 44 34;
+
+  --rose-50: 255 241 242;
+  --rose-100: 255 228 230;
+  --rose-200: 254 205 211;
+  --rose-300: 253 164 175;
+  --rose-400: 251 113 133;
+  --rose-500: 244 63 94;
+  --rose-600: 225 29 72;
+  --rose-700: 190 18 60;
+  --rose-800: 159 18 57;
+  --rose-900: 136 19 55;
+  --rose-950: 76 5 25;
+
+  --purple-50: 250 245 255;
+  --purple-100: 243 232 255;
+  --purple-200: 233 213 255;
+  --purple-300: 216 180 254;
+  --purple-400: 192 132 252;
+  --purple-500: 168 85 247;
+  --purple-600: 147 51 234;
+  --purple-700: 126 34 206;
+  --purple-800: 107 33 168;
+  --purple-900: 76 29 149;
+  --purple-950: 46 16 101;
+
+  --c-white: 255 255 255;
+  --c-black: 0 0 0;
+}
+/* --------------------------------------------------------------------------
+   TEMA 3 - CLARO
+   Fundos claros, texto em grafite e o mesmo destaque dourado.
+   Nesta escala os numeros sobem de valor conforme o tom escurece,
+   porque o papel do fundo e do texto se inverte (950 = fundo, 100 = texto).
+   -------------------------------------------------------------------------- */
+html[data-theme="claro"] {
+  --theme-color: #f1f5f9;
+
+  /* Superficies claras */
+  --slate-50: 255 255 255;
+  --slate-100: 15 23 42;   /* texto principal */
+  --slate-200: 30 41 59;
+  --slate-300: 51 65 85;
+  --slate-400: 71 85 105;
+  --slate-500: 100 116 139;
+  --slate-600: 148 163 184;
+  --slate-700: 203 213 225; /* borda de input / chip */
+  --slate-800: 226 232 240; /* borda e superficie secundaria */
+  --slate-900: 255 255 255; /* cartao */
+  --slate-950: 241 245 249; /* fundo da pagina e superficie embutida */
+
+  /* Dourado: 500 e o botao, 300/400 viram texto escuro sobre claro */
+  --amber-50: 255 251 235;
+  --amber-100: 254 243 199;
+  --amber-200: 253 230 138;
+  --amber-300: 180 83 9;
+  --amber-400: 161 98 7;
+  --amber-500: 217 119 6;
+  --amber-600: 245 158 11;
+  --amber-700: 180 83 9;
+  --amber-800: 146 64 14;
+  --amber-900: 100 116 139; /* usado so como sombra -> cinza neutro */
+  --amber-950: 71 85 105;   /* usado so como sombra -> cinza neutro */
+
+  --emerald-50: 236 253 245;
+  --emerald-100: 209 250 229;
+  --emerald-200: 6 95 70;
+  --emerald-300: 4 120 87;
+  --emerald-400: 4 120 87;
+  --emerald-500: 16 185 129;
+  --emerald-600: 5 150 105;
+  --emerald-700: 4 120 87;
+  --emerald-800: 6 95 70;
+  --emerald-900: 6 78 59;
+  --emerald-950: 4 120 87;
+
+  --rose-50: 255 241 242;
+  --rose-100: 255 228 230;
+  --rose-200: 159 18 57;
+  --rose-300: 190 18 60;
+  --rose-400: 225 29 72;
+  --rose-500: 244 63 94;
+  --rose-600: 225 29 72;
+  --rose-700: 190 18 60;
+  --rose-800: 159 18 57;
+  --rose-900: 136 19 55;
+  --rose-950: 225 29 72;
+
+  --purple-50: 250 245 255;
+  --purple-100: 243 232 255;
+  --purple-200: 221 200 251;
+  --purple-300: 126 34 206;
+  --purple-400: 124 58 237;
+  --purple-500: 168 85 247;
+  --purple-600: 147 51 234;
+  --purple-700: 126 34 206;
+  --purple-800: 107 33 168;
+  --purple-900: 76 29 149;
+  --purple-950: 88 28 135;
+
+  --c-white: 15 23 42; /* text-white vira grafite neste tema */
+  --c-black: 0 0 0;
+}
+
+/* ==========================================================================
+   Ajustes especificos por tema
+   As regras abaixo tem especificidade maior que as utilitarias do Tailwind
+   injetadas em tempo de execucao, por isso vencem sem precisar de !important.
+   ========================================================================== */
+
+/* --- Tema claro: correcoes de contraste ------------------------------- */
+
+/* No tema claro o 950 vira fundo claro, entao o texto sobre botao colorido
+   precisa voltar a ser escuro. */
+html[data-theme="claro"] .text-slate-950 { color: #0f172a; }
+html[data-theme="claro"] ::selection { color: #0f172a; }
+
+/* Unico botao que precisa de texto branco no tema claro. */
+html[data-theme="claro"] #btnIniciarCicloReforco { color: #ffffff; }
+
+/* hover do botao dourado: precisa clarear, nao escurecer. */
+html[data-theme="claro"] .hover\:bg-amber-400:hover { background-color: #f59e0b; }
+
+/* Borda do rodape (usa slate-900, que no tema claro e branco). */
+html[data-theme="claro"] footer { border-color: #e2e8f0; }
+
+/* --- Tema institucional: barra e logo ---------------------------------- */
+
+/* Barra caki Tiradentes fechando o cabecalho. */
+html[data-theme="institucional"] header::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  z-index: 2;
+  background: rgb(var(--institucional-caki));
+}
+
+/* Logo do cabecalho no Preto Institucional com a sigla em Caki Tiradentes. */
+html[data-theme="institucional"] #logoEap {
+  background-image: linear-gradient(135deg, #3d3a3c, #232122);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.5);
+}
+html[data-theme="institucional"] #logoEap .logo-sigla { color: rgb(var(--institucional-caki)); }
+
+/* --- Componentes com estilo proprio ----------------------------------- */
+
+/* Scrim dos modais: mantem o mesmo escurecimento em qualquer tema. */
+body .modal-scrim { background-color: rgb(2 6 23 / 0.78); }
+
+/* Item de tema marcado como ativo. */
+.tema-opt.tema-ativo { background-color: rgb(var(--amber-500) / 0.14); }
+.tema-check { opacity: 0; transition: opacity 0.15s ease; }
+.tema-opt.tema-ativo .tema-check { opacity: 1; }
+
+/* --- Scrollbar e animacoes -------------------------------------------- */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: rgb(var(--slate-950)); }
+::-webkit-scrollbar-thumb { background: rgb(var(--slate-800)); border-radius: 3px; }
+.touch-callout-none {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Troca de tema sem piscar */
+body, header, main, footer, .tema-opt { transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease; }

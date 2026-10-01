@@ -1,8 +1,9 @@
 // Service Worker - EAP PMMG Offline First
-const CACHE_NAME = 'eap-pmmg-v3';
+const CACHE_NAME = 'eap-pmmg-v3.3';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
+  './themes.css',
   './app.js',
   './questoes.json',
   './manifest.json',

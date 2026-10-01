@@ -13,6 +13,7 @@
   const STORAGE_CICLO = 'eap_pmmg_ciclo';                    // Número do Ciclo (1 = inéditas, 2+ = reforço)
   const STORAGE_RESP_CICLO = 'eap_pmmg_resp_ciclo';          // Questões já feitas no ciclo atual de reforço
   const STORAGE_TAMANHO_RODADA = 'eap_pmmg_tamanho_rodada';  // Qtd de questões por rodada
+  const STORAGE_TEMA = 'eap_pmmg_tema';                      // 'escuro' | 'institucional' | 'claro'
 
   // --- Estado Global ---
   let bancoQuestoes = [];
@@ -103,8 +104,77 @@
   const btnEntendiInstall = document.getElementById('btnEntendiInstall');
   let deferredInstallPrompt = null;
 
+  // Seletor de Tema
+  const metaThemeColor = document.getElementById('metaThemeColor');
+  const btnTemaApp = document.getElementById('btnTemaApp');
+  const popoverTemaApp = document.getElementById('popoverTemaApp');
+
+  // --- Sistema de Temas ---
+  // As cores vivem em themes.css como variáveis CSS (canais RGB).
+  // A paleta do Tailwind aponta para elas, então trocar o atributo
+  // data-theme no <html> retematiza o aplicativo inteiro na hora.
+  const TEMAS = {
+    escuro: { nome: 'Escuro' },
+    institucional: { nome: 'Institucional PMMG' },
+    claro: { nome: 'Claro' }
+  };
+
+  // 'heraldico' foi renomeado para 'institucional' (novas cores institucionais)
+  const ALIAS_TEMA = { heraldico: 'institucional' };
+
+  function normalizarTema(tema) {
+    const t = (tema && TEMAS[tema]) ? tema : ALIAS_TEMA[tema];
+    return (t && TEMAS[t]) ? t : 'escuro';
+  }
+
+  function obterTemaSalvo() {
+    try {
+      return normalizarTema(localStorage.getItem(STORAGE_TEMA));
+    } catch (e) {
+      return 'escuro';
+    }
+  }
+
+  function aplicarTema(tema) {
+    const t = normalizarTema(tema);
+
+    document.documentElement.setAttribute('data-theme', t);
+    document.documentElement.classList.toggle('dark', t !== 'claro');
+
+    try {
+      localStorage.setItem(STORAGE_TEMA, t);
+    } catch (e) {
+      /* modo privado: apenas nao persiste */
+    }
+
+    // Barra do navegador / barra de status do Android acompanha o tema
+    if (metaThemeColor) {
+      const cor = getComputedStyle(document.documentElement)
+        .getPropertyValue('--theme-color').trim();
+      if (cor) metaThemeColor.setAttribute('content', cor);
+    }
+
+    atualizarMarcadoresTema();
+  }
+
+  function atualizarMarcadoresTema() {
+    const atual = document.documentElement.getAttribute('data-theme');
+    document.querySelectorAll('.tema-opt').forEach(btn => {
+      const ativo = btn.getAttribute('data-tema') === atual;
+      btn.classList.toggle('tema-ativo', ativo);
+      btn.setAttribute('aria-checked', ativo ? 'true' : 'false');
+    });
+  }
+
+  function abrirSeletorTema(abrir) {
+    if (!popoverTemaApp) return;
+    popoverTemaApp.classList.toggle('hidden', !abrir);
+    if (btnTemaApp) btnTemaApp.setAttribute('aria-expanded', abrir ? 'true' : 'false');
+  }
+
   // --- Inicialização ---
   async function init() {
+    aplicarTema(obterTemaSalvo());
     carregarStorage();
     await carregarQuestoes();
     atualizarFiltros();
@@ -632,6 +702,30 @@
 
   // --- Registrar Eventos ---
   function registrarEventos() {
+    // Seletor de Tema
+    if (btnTemaApp && popoverTemaApp) {
+      btnTemaApp.addEventListener('click', (e) => {
+        e.stopPropagation();
+        abrirSeletorTema(popoverTemaApp.classList.contains('hidden'));
+      });
+
+      popoverTemaApp.addEventListener('click', (e) => {
+        const opt = e.target.closest('.tema-opt');
+        if (!opt) return;
+        aplicarTema(opt.getAttribute('data-tema'));
+        abrirSeletorTema(false);
+      });
+
+      document.addEventListener('click', (e) => {
+        if (popoverTemaApp.classList.contains('hidden')) return;
+        if (!popoverTemaApp.contains(e.target)) abrirSeletorTema(false);
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') abrirSeletorTema(false);
+      });
+    }
+
     selectMode.addEventListener('change', () => {
       atualizarFiltros();
       numeroRodada = 1;
@@ -831,7 +925,7 @@
     }
 
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./sw.js?v=3.1').then(reg => {
+      navigator.serviceWorker.register('./sw.js?v=3.3').then(reg => {
         reg.update();
       }).catch(err => {
         console.log('Falha ao registrar Service Worker:', err);
