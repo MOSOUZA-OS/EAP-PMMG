@@ -155,31 +155,49 @@
     </div>
 
     <!-- Filter Control Bar -->
-    <div class="max-w-4xl mx-auto px-4 py-2.5 bg-slate-900/60 border-t border-slate-800/80">
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
-        <!-- Mode Switcher -->
-        <div>
-          <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Modo de Estudo</label>
-          <select id="selectMode" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-amber-500">
-            <option value="estudo">Estudo por Tópicos</option>
-            <option value="simulado">Simulado Geral (Todas)</option>
-            <option value="erros">Caderno de Erros (<span id="countErrosBadge">0</span>)</option>
-          </select>
-        </div>
+    <div class="max-w-4xl mx-auto px-3 sm:px-4 py-2 bg-slate-900/60 border-t border-slate-800/80">
+      <!-- Select oculto para compatibilidade com lógica interna -->
+      <select id="selectMode" class="hidden">
+        <option value="estudo" selected>Tópicos</option>
+        <option value="simulado">Simulado</option>
+        <option value="erros">Erros</option>
+      </select>
 
+      <!-- Linha 1: Botões Táteis para Modo de Estudo -->
+      <div class="flex items-center gap-1.5 p-1 bg-slate-950/90 rounded-xl border border-slate-800">
+        <button type="button" id="btnModoEstudo" data-mode="estudo" class="btn-modo flex-1 py-1.5 px-2 rounded-lg text-xs font-bold text-center transition flex items-center justify-center gap-1.5 bg-amber-500 text-slate-950 shadow-sm">
+          <span>📚</span>
+          <span>Tópicos</span>
+        </button>
+        <button type="button" id="btnModoSimulado" data-mode="simulado" class="btn-modo flex-1 py-1.5 px-2 rounded-lg text-xs font-semibold text-center transition flex items-center justify-center gap-1.5 text-slate-400 hover:text-slate-200 hover:bg-slate-900/60">
+          <span>🎯</span>
+          <span>Simulado</span>
+        </button>
+        <button type="button" id="btnModoErros" data-mode="erros" class="btn-modo flex-1 py-1.5 px-2 rounded-lg text-xs font-semibold text-center transition flex items-center justify-center gap-1.5 text-slate-400 hover:text-slate-200 hover:bg-slate-900/60">
+          <span>⚠️</span>
+          <span>Erros (<span id="countErrosBadge">0</span>)</span>
+        </button>
+      </div>
+
+      <!-- Linha 2: Tema Principal e Assunto / Norma Lado a Lado (Grid Compacto de 2 Colunas) -->
+      <div id="rowFiltrosTopicos" class="grid grid-cols-2 gap-2 mt-2 transition-all">
         <!-- Filter Tema -->
-        <div id="wrapperTema">
-          <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Tema Principal</label>
-          <select id="selectTema" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-amber-500">
-            <option value="todos">Todos os Temas</option>
+        <div id="wrapperTema" class="min-w-0">
+          <label for="selectTema" class="block text-[9px] sm:text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-0.5 truncate">
+            Tema Principal
+          </label>
+          <select id="selectTema" class="w-full bg-slate-950 border border-slate-700/80 rounded-lg px-2 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-amber-500 truncate cursor-pointer">
+            <option value="todos">Todos</option>
           </select>
         </div>
 
         <!-- Filter Assunto -->
-        <div id="wrapperAssunto">
-          <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Assunto / Norma</label>
-          <select id="selectAssunto" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-amber-500">
-            <option value="todos">Todos os Assuntos</option>
+        <div id="wrapperAssunto" class="min-w-0">
+          <label for="selectAssunto" class="block text-[9px] sm:text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-0.5 truncate">
+            Assunto / Norma
+          </label>
+          <select id="selectAssunto" class="w-full bg-slate-950 border border-slate-700/80 rounded-lg px-2 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-amber-500 truncate cursor-pointer">
+            <option value="todos">Todos</option>
           </select>
         </div>
       </div>
@@ -474,6 +492,6 @@
   </footer>
 
   <!-- Core App Logic -->
-  <script src="app.js?v=3.3"></script>
+  <script src="app.js?v=4.0"></script>
 </body>
 </html>

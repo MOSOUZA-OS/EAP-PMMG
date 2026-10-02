@@ -38,6 +38,8 @@
   const selectAssunto = document.getElementById('selectAssunto');
   const wrapperTema = document.getElementById('wrapperTema');
   const wrapperAssunto = document.getElementById('wrapperAssunto');
+  const btnsModo = document.querySelectorAll('.btn-modo');
+  const rowFiltrosTopicos = document.getElementById('rowFiltrosTopicos');
 
   // Status e Rodadas
   const lblRodadaAtual = document.getElementById('lblRodadaAtual');
@@ -246,9 +248,32 @@
     bancoQuestoes = Array.from(map.values());
   }
 
+  // --- Sincronização dos Botões de Modo ---
+  function sincronizarBotoesModo(modo) {
+    if (btnsModo && btnsModo.length > 0) {
+      btnsModo.forEach(btn => {
+        const ativo = btn.dataset.mode === modo;
+        if (ativo) {
+          btn.className = 'btn-modo flex-1 py-1.5 px-2 rounded-lg text-xs font-bold text-center transition flex items-center justify-center gap-1.5 bg-amber-500 text-slate-950 shadow-sm';
+        } else {
+          btn.className = 'btn-modo flex-1 py-1.5 px-2 rounded-lg text-xs font-semibold text-center transition flex items-center justify-center gap-1.5 text-slate-400 hover:text-slate-200 hover:bg-slate-900/60';
+        }
+      });
+    }
+
+    if (rowFiltrosTopicos) {
+      if (modo === 'simulado' || modo === 'erros') {
+        rowFiltrosTopicos.classList.add('hidden');
+      } else {
+        rowFiltrosTopicos.classList.remove('hidden');
+      }
+    }
+  }
+
   // --- Atualização de Filtros ---
   function atualizarFiltros() {
     const modo = selectMode.value;
+    sincronizarBotoesModo(modo);
 
     if (modo === 'simulado' || modo === 'erros') {
       wrapperTema.classList.add('opacity-40', 'pointer-events-none');
@@ -260,7 +285,7 @@
 
     const temaAtual = selectTema.value;
     const temas = Array.from(new Set(bancoQuestoes.map(q => q.tema).filter(Boolean)));
-    selectTema.innerHTML = '<option value="todos">Todos os Temas</option>';
+    selectTema.innerHTML = '<option value="todos">Todos</option>';
     temas.forEach(t => {
       const opt = document.createElement('option');
       opt.value = t;
@@ -281,7 +306,7 @@
       : bancoQuestoes.filter(q => q.tema === temaSel);
 
     const assuntos = Array.from(new Set(filtradas.map(q => q.assunto).filter(Boolean)));
-    selectAssunto.innerHTML = '<option value="todos">Todos os Assuntos</option>';
+    selectAssunto.innerHTML = '<option value="todos">Todos</option>';
     assuntos.forEach(a => {
       const opt = document.createElement('option');
       opt.value = a;
@@ -723,6 +748,21 @@
 
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') abrirSeletorTema(false);
+      });
+    }
+
+    if (btnsModo && btnsModo.length > 0) {
+      btnsModo.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const modo = btn.dataset.mode;
+          if (selectMode.value !== modo) {
+            selectMode.value = modo;
+            sincronizarBotoesModo(modo);
+            atualizarFiltros();
+            numeroRodada = 1;
+            iniciarNovaRodada();
+          }
+        });
       });
     }
 
